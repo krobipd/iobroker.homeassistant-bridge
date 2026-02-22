@@ -1,0 +1,44 @@
+{
+  "name": "iobroker.homeassistant-bridge",
+  "version": "0.3.0",
+  "description": "Emulates Home Assistant for Shelly Wall Display to show any web URL (e.g. ioBroker VIS)",
+  "author": {
+    "name": "krobi"
+  },
+  "homepage": "https://github.com/yourusername/ioBroker.homeassistant-bridge",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "homeassistant",
+    "shelly",
+    "wall display",
+    "vis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ioBroker.homeassistant-bridge"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.2",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@iobroker/testing": "^5.0.0",
+    "eslint": "^9.15.0"
+  },
+  "main": "main.js",
+  "files": [
+    "admin/",
+    "lib/",
+    "main.js",
+    "io-package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "lint": "eslint"
+  }
+}
