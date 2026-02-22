@@ -18,12 +18,12 @@
     },
     "title": "Home Assistant Bridge",
     "titleLang": {
-      "en": "Home Assistant Bridge for Shelly Wall Display",
-      "de": "Home Assistant Bridge für Shelly Wall Display"
+      "en": "Home Assistant Bridge",
+      "de": "Home Assistant Bridge"
     },
     "desc": {
-      "en": "Emulates Home Assistant so Shelly Wall Display can show any web URL",
-      "de": "Emuliert Home Assistant damit Shelly Wall Display eine beliebige URL anzeigen kann"
+      "en": "Emulates Home Assistant so devices like Shelly Wall Display can show any web URL",
+      "de": "Emuliert Home Assistant damit Geräte wie Shelly Wall Display eine beliebige URL anzeigen kann"
     },
     "authors": [
       "krobi"
