@@ -18,18 +18,22 @@
     },
     "title": "Home Assistant Bridge",
     "titleLang": {
-      "en": "Home Assistant Bridge",
-      "de": "Home Assistant Bridge"
+      "en": "Home Assistant Emulation Bridge",
+      "de": "Home Assistant Emulation Bridge"
     },
     "desc": {
-      "en": "Emulates Home Assistant so devices like Shelly Wall Display can show any web URL",
-      "de": "Emuliert Home Assistant damit Geräte wie Shelly Wall Display eine beliebige URL anzeigen kann"
+      "en": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
+      "de": "Emuliert einen minimalen Home Assistant Server, sodass Geräte mit Home-Assistant-Dashboard-Unterstützung beliebige Web-URLs anzeigen können."
     },
     "authors": [
       "krobi"
     ],
     "keywords": [
-      "homeassistant", "shelly", "wall display", "vis", "bridge"
+      "homeassistant",
+      "shelly",
+      "wall display",
+      "vis",
+      "bridge"
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
@@ -46,10 +50,14 @@
       "config": "materialize"
     },
     "dependencies": [
-      { "js-controller": ">=5.0.0" }
+      {
+        "js-controller": ">=5.0.0"
+      }
     ],
     "globalDependencies": [
-      { "admin": ">=6.0.0" }
+      {
+        "admin": ">=6.0.0"
+      }
     ]
   },
   "native": {
@@ -66,7 +74,9 @@
     {
       "_id": "info",
       "type": "channel",
-      "common": { "name": "Information" },
+      "common": {
+        "name": "Information"
+      },
       "native": {}
     },
     {
