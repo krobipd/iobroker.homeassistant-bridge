@@ -1,7 +1,7 @@
 {
   "name": "iobroker.homeassistant-bridge",
   "version": "0.3.0",
-  "description": "Emulates Home Assistant for Shelly Wall Display to show any web URL (e.g. ioBroker VIS)",
+  "description": "Emulates Home Assistant for Devices Like Shelly Wall Display to show any web URL (e.g. ioBroker VIS)",
   "author": {
     "name": "krobi"
   },
