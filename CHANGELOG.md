@@ -1,5 +1,44 @@
 # Changelog
 
+## v0.4.0 — js-controller 7 & Admin 7 Update (14. März 2026)
+
+### Breaking Changes
+
+- **Node.js 20+** erforderlich (vorher Node.js 18+)
+- **js-controller 7.0.0+** erforderlich (vorher 5.0.0+)
+- **Admin 7.0.0+** erforderlich (vorher 6.0.0+)
+
+### Neue Features
+
+1. **jsonConfig Admin UI**
+   - Moderne JSON-basierte Konfigurationsoberfläche
+   - Drei Tabs: Haupteinstellungen, mDNS-Erkennung, Authentifizierung
+   - Ersetzt das veraltete Materialize-Framework
+
+2. **Verschlüsseltes Passwort**
+   - `encryptedNative` für das Passwort-Feld
+   - Passwort wird verschlüsselt in der Datenbank gespeichert
+   - `protectedNative` verhindert Auslesen über API
+
+3. **supportedMessages**
+   - `stopInstance: true` für sauberes Herunterfahren
+
+### Updates
+
+- **@iobroker/adapter-core**: 3.2.2 → 3.3.2
+- **Dependencies**: @eslint/js, globals, @iobroker/types hinzugefügt
+- **ESLint 9**: Flat Config Format (`eslint.config.js`)
+- **LICENSE**: MIT-Lizenz-Datei hinzugefügt
+- **Repository URLs**: Korrigiert auf krobipd/iobroker.homeassistant-bridge
+
+### Code-Qualität
+
+- ESLint-Konfiguration hinzugefügt
+- Lint-Fehler in `lib/mdns.js` behoben (curly braces)
+- `tier: 3` in io-package.json gesetzt
+
+---
+
 ## v0.3.0 — Code-Cleanup & Bug-Fixes (18. Februar 2026)
 
 ### Bug-Fixes
@@ -7,7 +46,7 @@
 1. **mdns.js — XML Closing Tag (KRITISCH)**
    - `</n>` → `</name>` — Avahi konnte die Service-Datei nicht parsen
    - Service wurde nie korrekt registriert, mDNS-Discovery war dadurch unmöglich
-   
+
 2. **webserver.js — requires_api_password in /api/discovery_info**
    - War dynamisch an `authRequired` gebunden statt hardcoded `true`
    - Display übersprang bei `false` den Auth-Flow über diesen Endpoint
@@ -30,31 +69,20 @@
 - **io-package.json:** `visUrl` Default auf leer statt `localhost` (verhindert Fehlkonfiguration)
 - **Encoding fix:** `°C` statt `Â°C` in unit_system
 
-### Dateistruktur (unverändert)
+---
 
-```
-homeassistant-bridge/
-├── main.js              — Adapter-Core
-├── lib/
-│   ├── webserver.js     — Express Server + HA-API + Auth
-│   └── mdns.js          — Avahi mDNS Service
-├── package.json
-└── io-package.json
-```
+## v0.2.0 — Vereinfachung (Februar 2026)
 
-### Zum mDNS-Problem
+- Proxy-Funktion entfernt
+- Nur noch Avahi für mDNS (kein Bonjour/multicast-dns)
+- CORS entfernt
 
-Der XML-Bug in mdns.js war mit hoher Wahrscheinlichkeit der Hauptgrund, warum das Shelly Display den Service nie gefunden hat. Mit dem Fix sollte Avahi die Service-Datei korrekt parsen und `_home-assistant._tcp` broadcasten. Test nach Update:
+---
 
-```bash
-# Adapter neu starten
-iobroker restart homeassistant-bridge
+## v0.1.0 — Erstveröffentlichung (Februar 2026)
 
-# Service-Datei prüfen (muss valides XML sein)
-cat /etc/avahi/services/homeassistant-bridge.service
-
-# mDNS-Broadcast verifizieren
-avahi-browse _home-assistant._tcp -r -t
-```
-
-Falls das Display den Service danach immer noch nicht findet, liegt es am Display selbst — nicht am Adapter.
+- Initiale Version
+- Home Assistant API Emulation
+- OAuth2-ähnlicher Authentifizierungsflow
+- mDNS Service Discovery
+- Redirect zu konfigurierbarer URL

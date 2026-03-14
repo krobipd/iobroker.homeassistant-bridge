@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "homeassistant-bridge",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "news": {
+      "0.4.0": {
+        "en": "Updated for js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative for password",
+        "de": "Update für js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative für Passwort"
+      },
       "0.3.0": {
         "en": "Code cleanup: removed uuid/body-parser deps, fixed mDNS XML bug, session cleanup, DRY refactor",
         "de": "Code-Cleanup: uuid/body-parser entfernt, mDNS XML-Bug gefixt, Session-Cleanup, DRY-Refactor"
@@ -30,6 +34,7 @@
     ],
     "keywords": [
       "homeassistant",
+      "home-assistant",
       "shelly",
       "wall display",
       "vis",
@@ -40,6 +45,7 @@
     "main": "main.js",
     "icon": "homeassistant-bridge.png",
     "enabled": true,
+    "tier": 3,
     "loglevel": "info",
     "mode": "daemon",
     "type": "infrastructure",
@@ -47,16 +53,25 @@
     "connectionType": "local",
     "dataSource": "push",
     "adminUI": {
-      "config": "materialize"
+      "config": "json"
     },
+    "supportedMessages": {
+      "stopInstance": true
+    },
+    "encryptedNative": [
+      "password"
+    ],
+    "protectedNative": [
+      "password"
+    ],
     "dependencies": [
       {
-        "js-controller": ">=5.0.0"
+        "js-controller": ">=7.0.0"
       }
     ],
     "globalDependencies": [
       {
-        "admin": ">=6.0.0"
+        "admin": ">=7.0.0"
       }
     ]
   },

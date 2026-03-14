@@ -1,33 +1,45 @@
 {
   "name": "iobroker.homeassistant-bridge",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
   "author": {
-    "name": "krobi"
+    "name": "krobi",
+    "email": ""
   },
-  "homepage": "https://github.com/yourusername/ioBroker.homeassistant-bridge",
+  "homepage": "https://github.com/krobipd/iobroker.homeassistant-bridge",
   "license": "MIT",
   "keywords": [
     "ioBroker",
     "homeassistant",
+    "home-assistant",
     "shelly",
     "wall display",
-    "vis"
+    "vis",
+    "bridge",
+    "emulation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ioBroker.homeassistant-bridge"
+    "url": "git+https://github.com/krobipd/iobroker.homeassistant-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krobipd/iobroker.homeassistant-bridge/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.2.2",
+    "@iobroker/adapter-core": "^3.3.2",
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.15.0",
     "@iobroker/testing": "^5.0.0",
-    "eslint": "^9.15.0"
+    "@iobroker/types": "^7.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.15.0",
+    "globals": "^16.0.0"
   },
   "main": "main.js",
   "files": [
@@ -39,6 +51,7 @@
   ],
   "scripts": {
     "test": "echo \"No tests yet\"",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   }
 }
