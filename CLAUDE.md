@@ -187,7 +187,7 @@ JSDoc-Warnungen sind normal - ioBroker-Standard erwartet Dokumentation.
 
 ## Offene TODOs
 
-- [ ] Unit Tests implementieren
+- [x] Unit Tests implementieren ✓ (95 Tests)
 - [x] README.md schreiben ✓
 - [ ] HTTPS Support (optional)
 - [ ] Rate Limiting für Auth-Endpoints
