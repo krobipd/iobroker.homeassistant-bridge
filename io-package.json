@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "homeassistant-bridge",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "news": {
+      "0.5.1": {
+        "en": "Updated emulated Home Assistant version to 2026.3.1",
+        "de": "Emulierte Home Assistant Version auf 2026.3.1 aktualisiert"
+      },
       "0.5.0": {
         "en": "Express 5 upgrade, ESLint 10, all dependencies updated to March 2026 versions",
         "de": "Express 5 Upgrade, ESLint 10, alle Dependencies auf März 2026 aktualisiert"

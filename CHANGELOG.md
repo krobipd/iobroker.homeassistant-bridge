@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.5.1 — Home Assistant 2026.3 (14. März 2026)
+
+### Updates
+
+- **HA_VERSION**: 2024.12.0 → 2026.3.1 (aktuelle HA-Version)
+- Emulierte Version entspricht jetzt der aktuellen Home Assistant Release
+
+---
+
 ## v0.5.0 — Express 5 & Dependencies Update (14. März 2026)
 
 ### Major Updates
