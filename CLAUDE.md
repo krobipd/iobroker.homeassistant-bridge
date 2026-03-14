@@ -190,5 +190,8 @@ JSDoc-Warnungen sind normal - ioBroker-Standard erwartet Dokumentation.
 - [x] Unit Tests implementieren ✓ (95 Tests)
 - [x] README.md schreiben ✓
 - [ ] HTTPS Support (optional)
-- [ ] Rate Limiting für Auth-Endpoints
 - [ ] Windows/macOS mDNS Alternative (Bonjour)
+
+## Bewusst nicht implementiert
+
+- **Rate Limiting**: Nicht sinnvoll - der Adapter macht nur URL-Redirects, es gibt keine schützenswerten Daten. Auth existiert nur um Shelly's Home-Assistant-Erwartung zu erfüllen.
