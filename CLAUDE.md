@@ -59,9 +59,51 @@ admin/
 - **Admin 7.0.0+** mit jsonConfig (nicht Materialize)
 - **Node.js 20+** erforderlich
 - **@iobroker/adapter-core 3.3.2** (aktuell)
+- **@iobroker/eslint-config 2.2.0** - offizielle ESLint-Regeln
 - **encryptedNative** für Passwörter verwenden
 - **protectedNative** verhindert API-Auslesen
 - **tier: 3** für Community-Adapter
+
+### Admin UI: jsonConfig vs React
+
+| Aspekt | jsonConfig | React Admin |
+|--------|------------|-------------|
+| Komplexität | Einfach | Komplex |
+| Frontend-Code | Keiner | React/JSX |
+| Build-Prozess | Keiner | Webpack |
+| Empfohlen für | 90% der Adapter | Komplexe Custom UIs |
+
+**Wann jsonConfig (wie wir):**
+- Einfache Formulare (Inputs, Checkboxen, Dropdowns)
+- Standard-Konfigurationsseiten
+- Kein spezielles UI-Verhalten
+
+**Wann React Admin:**
+- Komplexe, dynamische UIs
+- Custom-Komponenten (visuelle Editoren)
+- Live-Previews, viel Interaktionslogik
+
+**Best Practice:** Starte mit jsonConfig. Nur bei Grenzen zu React wechseln.
+
+### Relevante Dependencies
+
+| Paket | Nutzen | Grund |
+|-------|--------|-------|
+| ✅ @iobroker/adapter-core | Ja | Adapter-Basis |
+| ✅ @iobroker/eslint-config | Ja | Offizielle Linting-Regeln |
+| ✅ @iobroker/testing | Ja | Test-Framework |
+| ❌ @iobroker/build-tools | Nein | Nur für React-Admin |
+| ❌ @iobroker/js-controller-* | Nein | Controller-intern |
+
+### npm Warnungen (ignorierbar)
+
+```
+npm warn deprecated glob@10.5.0
+```
+- Kommt von: @iobroker/testing → mocha → glob
+- Betrifft nur devDependencies (Tests)
+- Production-Code nicht betroffen
+- Warten bis ioBroker/mocha aktualisiert
 
 ### Express 5 (März 2026)
 
@@ -110,7 +152,7 @@ admin/
 |---------|------------|
 | 0.5.2 | @iobroker/eslint-config + Prettier |
 | 0.5.1 | HA_VERSION → 2026.3.1 |
-| 0.5.0 | Express 5, ESLint 10, Dependencies März 2026 |
+| 0.5.0 | Express 5, Dependencies März 2026 |
 | 0.4.0 | js-controller 7, Admin 7, jsonConfig, encryptedNative |
 | 0.3.0 | Code Cleanup, mDNS XML Bug Fix, Session Cleanup |
 
