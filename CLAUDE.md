@@ -35,6 +35,11 @@ build/                  → Kompilierter JavaScript Code (gitignored)
 admin/
 ├── jsonConfig.json     → Admin UI Konfiguration (3 Tabs)
 └── homeassistant-bridge.svg → Adapter Icon
+.github/workflows/
+├── ci.yml              → CI: Build, Lint, Test (Node 20, 22, 24)
+└── release.yml         → Auto-Release bei Tag-Push (v*)
+scripts/
+└── version.js          → Versionierung (patch/minor/major)
 ```
 
 ## Wichtige API-Endpoints
@@ -112,6 +117,7 @@ admin/
 
 | Version | Änderungen |
 |---------|------------|
+| 0.6.1 | GitHub Actions CI + Release Workflows |
 | 0.6.0 | **TypeScript Migration** - src/ mit .ts Dateien, strict mode |
 | 0.5.2 | @iobroker/eslint-config + Prettier |
 | 0.5.1 | HA_VERSION → 2026.3.1 |
@@ -135,6 +141,12 @@ npm run format:check
 # Tests (95 Tests, inkl. automatischem Build)
 npm test
 npm run test:ci
+
+# Versionierung (erstellt Commit + Tag)
+npm run version:patch   # 0.6.1 → 0.6.2
+npm run version:minor   # 0.6.1 → 0.7.0
+npm run version:major   # 0.6.1 → 1.0.0
+# Danach: git push && git push origin v<version>
 
 # Adapter lokal testen
 node build/main.js
