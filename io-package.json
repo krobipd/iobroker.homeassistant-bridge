@@ -1,8 +1,12 @@
 {
 	"common": {
 		"name": "homeassistant-bridge",
-		"version": "0.6.0",
+		"version": "0.6.1",
 		"news": {
+			"0.6.1": {
+				"en": "Added GitHub Actions CI and release workflows",
+				"de": "GitHub Actions CI und Release Workflows hinzugefügt"
+			},
 			"0.6.0": {
 				"en": "Migrated to TypeScript with strict mode",
 				"de": "Migration auf TypeScript mit strict mode"
