@@ -1,7 +1,7 @@
 {
 	"common": {
 		"name": "homeassistant-bridge",
-		"version": "0.6.1",
+		"version": "0.6.2",
 		"news": {
 			"0.6.1": {
 				"en": "Added GitHub Actions CI and release workflows",
