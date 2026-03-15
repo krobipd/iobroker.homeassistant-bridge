@@ -69,6 +69,7 @@
 		"main": "build/main.js",
 		"icon": "homeassistant-bridge.svg",
 		"extIcon": "https://raw.githubusercontent.com/krobipd/iobroker.homeassistant-bridge/main/admin/homeassistant-bridge.svg",
+		"readme": "https://github.com/krobipd/iobroker.homeassistant-bridge/blob/main/README.md",
 		"enabled": true,
 		"tier": 3,
 		"loglevel": "info",
