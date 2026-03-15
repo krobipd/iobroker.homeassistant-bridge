@@ -1,69 +1,69 @@
 {
-  "name": "iobroker.homeassistant-bridge",
-  "version": "0.5.2",
-  "description": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
-  "author": {
-    "name": "krobi"
-  },
-  "homepage": "https://github.com/krobipd/iobroker.homeassistant-bridge",
-  "license": "MIT",
-  "keywords": [
-    "ioBroker",
-    "homeassistant",
-    "home-assistant",
-    "shelly",
-    "wall display",
-    "vis",
-    "bridge",
-    "emulation"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krobipd/iobroker.homeassistant-bridge.git"
-  },
-  "bugs": {
-    "url": "https://github.com/krobipd/iobroker.homeassistant-bridge/issues"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "dependencies": {
-    "@iobroker/adapter-core": "^3.3.2",
-    "express": "^5.0.0"
-  },
-  "devDependencies": {
-    "@iobroker/eslint-config": "^2.2.0",
-    "@iobroker/testing": "^5.0.0",
-    "@iobroker/types": "^7.0.0",
-    "@types/chai": "^5.2.3",
-    "@types/express": "^5.0.0",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^25.0.0",
-    "source-map-support": "^0.5.21",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  },
-  "main": "build/main.js",
-  "files": [
-    "admin/",
-    "build/",
-    "io-package.json",
-    "LICENSE"
-  ],
-  "scripts": {
-    "prebuild": "rm -rf ./build",
-    "build:ts": "tsc -p tsconfig.build.json",
-    "build": "npm run build:ts",
-    "watch": "tsc -w",
-    "test": "npm run build && mocha --exit \"test/**/*.js\"",
-    "test:ci": "npm run build && mocha --exit --reporter spec \"test/**/*.js\"",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepare": "npm run build",
-    "version:patch": "node scripts/version.js patch",
-    "version:minor": "node scripts/version.js minor",
-    "version:major": "node scripts/version.js major"
-  }
+	"name": "iobroker.homeassistant-bridge",
+	"version": "0.6.0",
+	"description": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
+	"author": {
+		"name": "krobi"
+	},
+	"homepage": "https://github.com/krobipd/iobroker.homeassistant-bridge",
+	"license": "MIT",
+	"keywords": [
+		"ioBroker",
+		"homeassistant",
+		"home-assistant",
+		"shelly",
+		"wall display",
+		"vis",
+		"bridge",
+		"emulation"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/krobipd/iobroker.homeassistant-bridge.git"
+	},
+	"bugs": {
+		"url": "https://github.com/krobipd/iobroker.homeassistant-bridge/issues"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+		"@iobroker/adapter-core": "^3.3.2",
+		"express": "^5.0.0"
+	},
+	"devDependencies": {
+		"@iobroker/eslint-config": "^2.2.0",
+		"@iobroker/testing": "^5.0.0",
+		"@iobroker/types": "^7.0.0",
+		"@types/chai": "^5.2.3",
+		"@types/express": "^5.0.0",
+		"@types/mocha": "^10.0.10",
+		"@types/node": "^25.0.0",
+		"source-map-support": "^0.5.21",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3"
+	},
+	"main": "build/main.js",
+	"files": [
+		"admin/",
+		"build/",
+		"io-package.json",
+		"LICENSE"
+	],
+	"scripts": {
+		"prebuild": "rm -rf ./build",
+		"build:ts": "tsc -p tsconfig.build.json",
+		"build": "npm run build:ts",
+		"watch": "tsc -w",
+		"test": "npm run build && mocha --exit \"test/**/*.js\"",
+		"test:ci": "npm run build && mocha --exit --reporter spec \"test/**/*.js\"",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"prepare": "npm run build",
+		"version:patch": "node scripts/version.js patch",
+		"version:minor": "node scripts/version.js minor",
+		"version:major": "node scripts/version.js major"
+	}
 }

@@ -1,137 +1,141 @@
 {
-  "common": {
-    "name": "homeassistant-bridge",
-    "version": "0.5.2",
-    "news": {
-      "0.5.2": {
-        "en": "Switched to official @iobroker/eslint-config with Prettier",
-        "de": "Umstellung auf offizielle @iobroker/eslint-config mit Prettier"
-      },
-      "0.5.1": {
-        "en": "Updated emulated Home Assistant version to 2026.3.1",
-        "de": "Emulierte Home Assistant Version auf 2026.3.1 aktualisiert"
-      },
-      "0.5.0": {
-        "en": "Express 5 upgrade, ESLint 10, all dependencies updated to March 2026 versions",
-        "de": "Express 5 Upgrade, ESLint 10, alle Dependencies auf März 2026 aktualisiert"
-      },
-      "0.4.0": {
-        "en": "Updated for js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative for password",
-        "de": "Update für js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative für Passwort"
-      },
-      "0.3.0": {
-        "en": "Code cleanup: removed uuid/body-parser deps, fixed mDNS XML bug, session cleanup, DRY refactor",
-        "de": "Code-Cleanup: uuid/body-parser entfernt, mDNS XML-Bug gefixt, Session-Cleanup, DRY-Refactor"
-      },
-      "0.2.0": {
-        "en": "Simplified: proxy removed, Avahi-only mDNS, CORS removed",
-        "de": "Vereinfacht: Proxy entfernt, nur Avahi für mDNS, CORS entfernt"
-      },
-      "0.1.0": {
-        "en": "Initial release",
-        "de": "Erstveröffentlichung"
-      }
-    },
-    "title": "Home Assistant Bridge",
-    "titleLang": {
-      "en": "Home Assistant Emulation Bridge",
-      "de": "Home Assistant Emulation Bridge"
-    },
-    "desc": {
-      "en": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
-      "de": "Emuliert einen minimalen Home Assistant Server, sodass Geräte mit Home-Assistant-Dashboard-Unterstützung beliebige Web-URLs anzeigen können."
-    },
-    "authors": [
-      "krobi"
-    ],
-    "keywords": [
-      "homeassistant",
-      "home-assistant",
-      "shelly",
-      "wall display",
-      "vis",
-      "bridge"
-    ],
-    "license": "MIT",
-    "platform": "Javascript/Node.js",
-    "main": "build/main.js",
-    "icon": "homeassistant-bridge.svg",
-    "extIcon": "https://raw.githubusercontent.com/krobipd/iobroker.homeassistant-bridge/main/admin/homeassistant-bridge.svg",
-    "enabled": true,
-    "tier": 3,
-    "loglevel": "info",
-    "mode": "daemon",
-    "type": "infrastructure",
-    "compact": true,
-    "connectionType": "local",
-    "dataSource": "push",
-    "adminUI": {
-      "config": "json"
-    },
-    "supportedMessages": {
-      "stopInstance": true
-    },
-    "encryptedNative": [
-      "password"
-    ],
-    "protectedNative": [
-      "password"
-    ],
-    "dependencies": [
-      {
-        "js-controller": ">=7.0.0"
-      }
-    ],
-    "globalDependencies": [
-      {
-        "admin": ">=7.0.0"
-      }
-    ]
-  },
-  "native": {
-    "port": 8123,
-    "visUrl": "",
-    "authRequired": false,
-    "username": "admin",
-    "password": "",
-    "mdnsEnabled": true,
-    "serviceName": "ioBroker"
-  },
-  "objects": [],
-  "instanceObjects": [
-    {
-      "_id": "info",
-      "type": "channel",
-      "common": {
-        "name": "Information"
-      },
-      "native": {}
-    },
-    {
-      "_id": "info.connection",
-      "type": "state",
-      "common": {
-        "role": "indicator.connected",
-        "name": "Server is running",
-        "type": "boolean",
-        "read": true,
-        "write": false,
-        "def": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "info.clients",
-      "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Connected Shelly Displays",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
-      "native": {}
-    }
-  ]
+	"common": {
+		"name": "homeassistant-bridge",
+		"version": "0.6.0",
+		"news": {
+			"0.6.0": {
+				"en": "Migrated to TypeScript with strict mode",
+				"de": "Migration auf TypeScript mit strict mode"
+			},
+			"0.5.2": {
+				"en": "Switched to official @iobroker/eslint-config with Prettier",
+				"de": "Umstellung auf offizielle @iobroker/eslint-config mit Prettier"
+			},
+			"0.5.1": {
+				"en": "Updated emulated Home Assistant version to 2026.3.1",
+				"de": "Emulierte Home Assistant Version auf 2026.3.1 aktualisiert"
+			},
+			"0.5.0": {
+				"en": "Express 5 upgrade, ESLint 10, all dependencies updated to March 2026 versions",
+				"de": "Express 5 Upgrade, ESLint 10, alle Dependencies auf März 2026 aktualisiert"
+			},
+			"0.4.0": {
+				"en": "Updated for js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative for password",
+				"de": "Update für js-controller 7 & Admin 7, jsonConfig UI, Node.js 20+, encryptedNative für Passwort"
+			},
+			"0.3.0": {
+				"en": "Code cleanup: removed uuid/body-parser deps, fixed mDNS XML bug, session cleanup, DRY refactor",
+				"de": "Code-Cleanup: uuid/body-parser entfernt, mDNS XML-Bug gefixt, Session-Cleanup, DRY-Refactor"
+			},
+			"0.2.0": {
+				"en": "Simplified: proxy removed, Avahi-only mDNS, CORS removed",
+				"de": "Vereinfacht: Proxy entfernt, nur Avahi für mDNS, CORS entfernt"
+			},
+			"0.1.0": {
+				"en": "Initial release",
+				"de": "Erstveröffentlichung"
+			}
+		},
+		"title": "Home Assistant Bridge",
+		"titleLang": {
+			"en": "Home Assistant Emulation Bridge",
+			"de": "Home Assistant Emulation Bridge"
+		},
+		"desc": {
+			"en": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
+			"de": "Emuliert einen minimalen Home Assistant Server, sodass Geräte mit Home-Assistant-Dashboard-Unterstützung beliebige Web-URLs anzeigen können."
+		},
+		"authors": [
+			"krobi"
+		],
+		"keywords": [
+			"homeassistant",
+			"home-assistant",
+			"shelly",
+			"wall display",
+			"vis",
+			"bridge"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "homeassistant-bridge.svg",
+		"extIcon": "https://raw.githubusercontent.com/krobipd/iobroker.homeassistant-bridge/main/admin/homeassistant-bridge.svg",
+		"enabled": true,
+		"tier": 3,
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "infrastructure",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"adminUI": {
+			"config": "json"
+		},
+		"supportedMessages": {
+			"stopInstance": true
+		},
+		"encryptedNative": [
+			"password"
+		],
+		"protectedNative": [
+			"password"
+		],
+		"dependencies": [
+			{
+				"js-controller": ">=7.0.0"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=7.0.0"
+			}
+		]
+	},
+	"native": {
+		"port": 8123,
+		"visUrl": "",
+		"authRequired": false,
+		"username": "admin",
+		"password": "",
+		"mdnsEnabled": true,
+		"serviceName": "ioBroker"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Server is running",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.clients",
+			"type": "state",
+			"common": {
+				"role": "value",
+				"name": "Connected Shelly Displays",
+				"type": "number",
+				"read": true,
+				"write": false,
+				"def": 0
+			},
+			"native": {}
+		}
+	]
 }
