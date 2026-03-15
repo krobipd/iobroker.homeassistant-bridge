@@ -27,6 +27,6 @@ export default [
         },
     },
     {
-        ignores: ['build/**', 'node_modules/**', 'admin/**', 'test/**'],
+        ignores: ['build/**', 'node_modules/**', 'admin/**', 'test/**', 'scripts/**'],
     },
 ];
