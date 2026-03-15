@@ -1,5 +1,7 @@
 # CLAUDE.md - Projekt-Wissen für Claude
 
+> **Hinweis:** Dieses Projekt nutzt die gemeinsame ioBroker-Wissensbasis unter `../CLAUDE.md`. Diese enthält allgemeine Best Practices, Standard-Konfigurationen und Workflows für alle ioBroker-Adapter-Projekte. Die vorliegende Datei ergänzt diese mit projekt-spezifischen Details.
+
 ## Projekt-Übersicht
 
 **ioBroker HomeAssistant Bridge Adapter** - Emuliert einen minimalen Home Assistant Server, damit Geräte wie Shelly Wall Displays sich authentifizieren und dann auf ein ioBroker VIS Dashboard weitergeleitet werden können.
@@ -66,65 +68,7 @@ admin/
 }
 ```
 
-## Best Practices & Learnings
-
-### ioBroker Adapter (März 2026)
-
-- **js-controller 7.0.0+** erforderlich
-- **Admin 7.0.0+** mit jsonConfig (nicht Materialize)
-- **Node.js 20+** erforderlich
-- **@iobroker/adapter-core 3.3.2** (aktuell)
-- **@iobroker/eslint-config 2.2.0** - offizielle ESLint-Regeln
-- **encryptedNative** für Passwörter verwenden
-- **protectedNative** verhindert API-Auslesen
-- **tier: 3** für Community-Adapter
-
-### Admin UI: jsonConfig vs React
-
-| Aspekt | jsonConfig | React Admin |
-|--------|------------|-------------|
-| Komplexität | Einfach | Komplex |
-| Frontend-Code | Keiner | React/JSX |
-| Build-Prozess | Keiner | Webpack |
-| Empfohlen für | 90% der Adapter | Komplexe Custom UIs |
-
-**Wann jsonConfig (wie wir):**
-- Einfache Formulare (Inputs, Checkboxen, Dropdowns)
-- Standard-Konfigurationsseiten
-- Kein spezielles UI-Verhalten
-
-**Wann React Admin:**
-- Komplexe, dynamische UIs
-- Custom-Komponenten (visuelle Editoren)
-- Live-Previews, viel Interaktionslogik
-
-**Best Practice:** Starte mit jsonConfig. Nur bei Grenzen zu React wechseln.
-
-### Relevante Dependencies
-
-| Paket | Nutzen | Grund |
-|-------|--------|-------|
-| ✅ @iobroker/adapter-core | Ja | Adapter-Basis |
-| ✅ @iobroker/eslint-config | Ja | Offizielle Linting-Regeln |
-| ✅ @iobroker/testing | Ja | Test-Framework |
-| ❌ @iobroker/build-tools | Nein | Nur für React-Admin |
-| ❌ @iobroker/js-controller-* | Nein | Controller-intern |
-
-### npm Warnungen (ignorierbar)
-
-```
-npm warn deprecated glob@10.5.0
-```
-- Kommt von: @iobroker/testing → mocha → glob
-- Betrifft nur devDependencies (Tests)
-- Production-Code nicht betroffen
-- Warten bis ioBroker/mocha aktualisiert
-
-### Express 5 (März 2026)
-
-- Bessere async/await Unterstützung
-- Keine Breaking Changes für unseren Code
-- `res.status(code).json(data)` Pattern verwenden
+## Projekt-spezifische Technologien
 
 ### Home Assistant API
 
@@ -174,17 +118,15 @@ npm warn deprecated glob@10.5.0
 ## Befehle
 
 ```bash
-# Lint (offizielle @iobroker/eslint-config)
+# Lint & Format
 npm run lint
 npm run lint:fix
-
-# Formatierung (Prettier)
 npm run format
 npm run format:check
 
-# Tests ausführen (95 Tests)
+# Tests (95 Tests)
 npm test
-npm run test:ci    # mit spec Reporter für CI
+npm run test:ci
 
 # Adapter lokal testen
 node main.js
@@ -192,21 +134,6 @@ node main.js
 # mDNS Service prüfen
 avahi-browse _home-assistant._tcp -r -t
 ```
-
-## ESLint & Prettier
-
-Verwendet die offizielle **@iobroker/eslint-config** (v2.2.0):
-- `eslint.config.mjs` - ESLint Flat Config (ESM)
-- `prettier.config.mjs` - Prettier Konfiguration (ESM)
-
-JSDoc-Warnungen sind normal - ioBroker-Standard erwartet Dokumentation.
-
-## Erledigte Aufgaben
-
-- [x] Unit Tests implementieren ✓ (95 Tests)
-- [x] README.md schreiben ✓
-- [x] Dokumentation aktualisieren ✓
-- [x] Package-Validierung ✓ (@iobroker/testing)
 
 ## Design-Philosophie
 
@@ -218,15 +145,15 @@ Der Adapter tut genau eine Sache: Shelly Wall Display zu einer beliebigen URL we
 2. **Schützt es tatsächlich etwas Schützenswertes?**
 3. **Rechtfertigt der Nutzen die Komplexität?**
 
-Features die diese Fragen mit "Nein" beantworten, wurden bewusst nicht implementiert. Das hält den Adapter wartbar, verständlich und robust.
+Features die diese Fragen mit "Nein" beantworten, wurden bewusst nicht implementiert.
 
 ## Bewusst nicht implementiert
 
-- **HTTPS Support**: Shelly Wall Display unterstützt kein HTTPS für Home-Assistant-Verbindungen. HTTPS würde nichts bringen und könnte die Kompatibilität brechen. (Quelle: [Shelly Community](https://community.shelly.cloud/topic/13467-https-host-name-support-for-home-assistant-integration))
+- **HTTPS Support**: Shelly Wall Display unterstützt kein HTTPS für Home-Assistant-Verbindungen. HTTPS würde nichts bringen und könnte die Kompatibilität brechen.
 
-- **Rate Limiting**: Nicht sinnvoll - der Adapter macht nur URL-Redirects, es gibt keine schützenswerten Daten. Auth existiert nur um Shelly's Home-Assistant-Erwartung zu erfüllen.
+- **Rate Limiting**: Nicht sinnvoll - der Adapter macht nur URL-Redirects, es gibt keine schützenswerten Daten.
 
-- **Windows/macOS mDNS (Bonjour)**: Manuelle IP-Eingabe funktioniert zuverlässig und ist im README dokumentiert. ioBroker-Server laufen typischerweise auf Linux. Die Komplexität einer Bonjour-Integration rechtfertigt den minimalen Nutzen nicht.
+- **Windows/macOS mDNS (Bonjour)**: Manuelle IP-Eingabe funktioniert zuverlässig. ioBroker-Server laufen typischerweise auf Linux.
 
 ## Test-Abdeckung
 
