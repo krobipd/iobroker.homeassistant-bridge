@@ -355,5 +355,3 @@ export class WebServer {
         });
     }
 }
-
-export default WebServer;

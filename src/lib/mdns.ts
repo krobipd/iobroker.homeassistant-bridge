@@ -157,5 +157,3 @@ export class MDNSService {
         this.active = false;
     }
 }
-
-export default MDNSService;
