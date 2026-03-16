@@ -114,18 +114,22 @@ scripts/
 - **Branch**: main
 - **Autor**: krobi
 
+## Status
+
+**Auf npm veröffentlicht** ✅ — `iobroker.homeassistant-bridge@0.8.1`
+**ioBroker Repository PR** ✅ — https://github.com/ioBroker/ioBroker.repositories/pull/5632 (ausstehend)
+**Release-Pipeline** ✅ — vollautomatisch via `test-and-release.yml`
+
 ## Versionshistorie (Kurzfassung)
 
 | Version | Änderungen |
 |---------|------------|
+| 0.8.1 | Release-Pipeline Fix (alte Workflows entfernt, permissions hinzugefügt) |
+| 0.8.0 | ioBroker-Konformität, alle Übersetzungen, PayPal Donation Link |
 | 0.7.0 | **Interface-Auswahl** - bindAddress mit IP-Dropdown (type: "ip") |
 | 0.6.3 | Repository-URL-Format für Admin-UI GitHub-Installation korrigiert |
 | 0.6.2 | JSDoc-Dokumentation komplett, ESLint 0 Warnings |
-| 0.6.1 | GitHub Actions CI + Release Workflows |
 | 0.6.0 | **TypeScript Migration** - src/ mit .ts Dateien, strict mode |
-| 0.5.2 | @iobroker/eslint-config + Prettier |
-| 0.5.1 | HA_VERSION → 2026.3.1 |
-| 0.5.0 | Express 5, Dependencies März 2026 |
 | 0.4.0 | js-controller 7, Admin 7, jsonConfig, encryptedNative |
 | 0.3.0 | Code Cleanup, mDNS XML Bug Fix, Session Cleanup |
 
@@ -142,9 +146,11 @@ npm run lint:fix
 npm run format
 npm run format:check
 
-# Tests (99 Tests, inkl. automatischem Build)
-npm test
-npm run test:ci
+# Tests (111 Tests)
+npm test                  # Alle Tests
+npm run test:package      # Nur Package-Tests (für CI check-phase)
+npm run test:integration  # Alle Tests (für CI test-phase)
+npm run check             # TypeScript Typ-Prüfung ohne Build
 
 # Versionierung (erstellt Commit + Tag)
 npm run version:patch   # 0.6.1 → 0.6.2
@@ -186,9 +192,9 @@ test/
 ├── testConstants.ts    → Shared Constants (10 Tests)
 ├── testMdns.ts         → mDNS Service, XML Generation (17 Tests)
 ├── testWebServer.ts    → HTTP Endpoints, Auth, Sessions, bindAddress (30 Tests)
-└── testPackageFiles.ts → @iobroker/testing Validierung (42 Tests)
+└── testPackageFiles.ts → @iobroker/testing Validierung (54 Tests)
 
-Total: 99 Tests (alle TypeScript)
+Total: 111 Tests (alle TypeScript)
 ```
 
 Die Tests werden mit `tsconfig.test.json` kompiliert und aus `build/test/` ausgeführt.
