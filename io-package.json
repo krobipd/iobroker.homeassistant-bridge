@@ -1,7 +1,7 @@
 {
 	"common": {
 		"name": "homeassistant-bridge",
-		"version": "0.8.0",
+		"version": "0.8.1",
 		"news": {
 			"0.8.0": {
 				"en": "ioBroker repository compliance: official testing actions, all translations, donation link",
