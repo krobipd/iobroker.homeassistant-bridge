@@ -71,7 +71,7 @@ jobs:
 
   # Deploys the final package to NPM and creates GitHub release
   deploy:
-    needs: [adapter-tests]
+    needs: [check-and-lint, adapter-tests]
 
     # Trigger this step only when a commit on main is tagged with a version number
     if: |
