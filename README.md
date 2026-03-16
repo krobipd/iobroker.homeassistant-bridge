@@ -1,6 +1,6 @@
 # ioBroker.homeassistant-bridge
 
-![Version](https://img.shields.io/badge/version-0.7.0-blue)
+![Version](https://img.shields.io/badge/version-0.8.0-blue)
 ![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -172,6 +172,9 @@ build/                # Compiled JavaScript code
 
 ## Changelog
 
+### 0.8.0 (2026-03-16)
+- ioBroker repository compliance: official testing actions, all translations, donation link
+
 ### 0.7.0 (2026-03-16)
 - Added network interface selection dropdown for bind address
 
@@ -203,6 +206,14 @@ build/                # Compiled JavaScript code
 - Fixed mDNS XML bug
 - Session cleanup
 - DRY refactor
+
+---
+
+## Support
+
+If this adapter is useful to you, consider supporting its development:
+
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/krobipd)
 
 ---
 

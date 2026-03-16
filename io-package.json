@@ -3,6 +3,19 @@
 		"name": "homeassistant-bridge",
 		"version": "0.8.0",
 		"news": {
+			"0.8.0": {
+				"en": "ioBroker repository compliance: official testing actions, all translations, donation link",
+				"de": "ioBroker Repository-Konformität: offizielle Test-Actions, alle Übersetzungen, Spendenlink",
+				"ru": "Соответствие репозиторию ioBroker: официальные тестовые actions, все переводы, ссылка для пожертвований",
+				"pt": "Conformidade com repositório ioBroker: actions de teste oficiais, todas traduções, link de doação",
+				"nl": "ioBroker repository-conformiteit: officiële test-actions, alle vertalingen, donatie-link",
+				"fr": "Conformité au dépôt ioBroker: actions de test officielles, toutes les traductions, lien de don",
+				"it": "Conformità al repository ioBroker: actions di test ufficiali, tutte le traduzioni, link donazione",
+				"es": "Conformidad con el repositorio ioBroker: actions de prueba oficiales, todas las traducciones, enlace de donación",
+				"pl": "Zgodność z repozytorium ioBroker: oficjalne actions testowe, wszystkie tłumaczenia, link do darowizny",
+				"uk": "Відповідність репозиторію ioBroker: офіційні тестові actions, всі переклади, посилання для пожертв",
+				"zh-cn": "ioBroker存储库合规性：官方测试actions、所有翻译、捐款链接"
+			},
 			"0.7.0": {
 				"en": "Added network interface selection dropdown for bind address",
 				"de": "Netzwerk-Interface-Auswahl für Bind-Adresse hinzugefügt",
