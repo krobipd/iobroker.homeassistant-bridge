@@ -58,6 +58,7 @@
 		"test": "npm run build:test && mocha --exit \"build/test/**/*.js\"",
 		"test:ci": "npm run build:test && mocha --exit --reporter spec \"build/test/**/*.js\"",
 		"test:package": "npm run build:test && mocha --exit \"build/test/testPackageFiles.js\"",
+		"test:integration": "npm run build:test && mocha --exit \"build/test/**/*.js\"",
 		"build:test": "rm -rf ./build && tsc -p tsconfig.test.json",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
