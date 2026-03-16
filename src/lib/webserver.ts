@@ -36,9 +36,13 @@ export class WebServer {
 
     /** Returns the actual address the server is bound to, or null if not running */
     get boundAddress(): { address: string; port: number } | null {
-        if (!this.server) return null;
+        if (!this.server) {
+            return null;
+        }
         const addr = this.server.address();
-        if (typeof addr === 'string' || !addr) return null;
+        if (typeof addr === 'string' || !addr) {
+            return null;
+        }
         return { address: addr.address, port: addr.port };
     }
 
