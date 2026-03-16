@@ -20,7 +20,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/krobipd/iobroker.homeassistant-bridge"
+		"url": "git+https://github.com/krobipd/iobroker.homeassistant-bridge.git"
 	},
 	"bugs": {
 		"url": "https://github.com/krobipd/iobroker.homeassistant-bridge/issues"
@@ -34,7 +34,9 @@
 	},
 	"devDependencies": {
 		"@iobroker/eslint-config": "^2.2.0",
-		"@iobroker/testing": "^5.0.0",
+		"@iobroker/testing": "^5.2.2",
+		"chai": "^5.2.0",
+		"mocha": "^11.5.0",
 		"@iobroker/types": "^7.0.0",
 		"@types/chai": "^5.2.3",
 		"@types/express": "^5.0.0",

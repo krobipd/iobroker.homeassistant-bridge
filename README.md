@@ -5,81 +5,56 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Ein minimaler Home-Assistant-Emulator für ioBroker.
+A minimal Home Assistant emulator for ioBroker.
 
-Dieser Adapter ermöglicht es Geräten, die ausschließlich ein
-Home-Assistant-Dashboard anzeigen können, einen Home-Assistant-Server
-vorzutäuschen und stattdessen eine beliebige Web-URL bereitzustellen.
+This adapter allows devices that only support Home Assistant dashboards to connect to a fake Home Assistant server and be redirected to any custom web URL.
 
-Die Implementierung wurde vollständig mit Unterstützung von Claude.ai
-erstellt.
+---
 
-------------------------------------------------------------------------
+## Purpose
 
-## Ziel
+Devices like the **Shelly Wall Display XL** officially only allow connection to a Home Assistant server.
 
-Geräte wie das **Shelly Wall Display XL** erlauben offiziell nur die
-Verbindung zu einem Home Assistant Server.
+With this bridge, you can display:
 
-Mit dieser Bridge kann stattdessen z. B.:
+- an ioBroker VIS dashboard
+- a VIS-2 instance
+- a custom dashboard
+- or any internal/external web application
 
--   eine ioBroker VIS\
--   eine VIS-2 Instanz\
--   ein eigenes Dashboard\
--   oder eine beliebige interne/externe Web-Applikation
+**without running a real Home Assistant Core**.
 
-angezeigt werden --- **ohne echten Home Assistant Core**.
+---
 
-------------------------------------------------------------------------
+## Tested Devices
 
-## Getestet mit
+- Shelly Wall Display XL
 
--   Shelly Wall Display XL
+This allows running an ioBroker VIS natively on the Wall Display.
 
-Damit lässt sich eine ioBroker VIS nativ auf dem Wall Display betreiben.
+---
 
-------------------------------------------------------------------------
+## How It Works
 
-## Funktionsweise (Kurzfassung)
+The adapter:
 
-Der Adapter:
+- Emulates relevant Home Assistant API endpoints
+- Provides a `_home-assistant._tcp` mDNS service
+- Implements a minimal OAuth2-like auth flow
+- Redirects to the configured target URL after successful authentication
 
--   emuliert relevante Home Assistant API-Endpunkte\
--   stellt einen `_home-assistant._tcp` mDNS-Service bereit\
--   implementiert einen minimalen Auth-Flow\
--   leitet nach erfolgreicher Anmeldung auf die konfigurierte Ziel-URL
-    weiter
+The display recognizes the bridge as a Home Assistant server.
 
-Das Display erkennt die Bridge als Home Assistant Server.
+---
 
-------------------------------------------------------------------------
+## Requirements
 
-## mDNS Hinweis
+- **Node.js >= 20**
+- **ioBroker js-controller >= 7.0.0**
+- **ioBroker Admin >= 7.6.17**
+- Linux system with Avahi (for mDNS)
 
-Der Adapter registriert einen `_home-assistant._tcp` Service via Avahi,
-sodass eine automatische Erkennung per mDNS möglich sein sollte.
-
-In meinen Tests hat die automatische Discovery jedoch nicht zuverlässig
-funktioniert.
-
-Die manuelle Einrichtung funktioniert dagegen stabil:
-
-    IP:   <IP-des-ioBroker>
-    Port: 8123
-
-Über die direkte IP-Eingabe verbindet sich das Display zuverlässig mit
-der Bridge.
-
-------------------------------------------------------------------------
-
-## Voraussetzungen
-
--   **Node.js ≥ 20**
--   **ioBroker js-controller ≥ 7.0.0**
--   **ioBroker Admin ≥ 7.0.0**
--   Linux-System mit Avahi (für mDNS)
-
-------------------------------------------------------------------------
+---
 
 ## Installation
 
@@ -89,108 +64,154 @@ npm install iobroker.homeassistant-bridge
 iobroker add homeassistant-bridge
 ```
 
-Oder über die ioBroker Admin-Oberfläche: Adapter → Suche nach "homeassistant-bridge".
+Or via the ioBroker Admin UI: Adapters -> Search for "homeassistant-bridge".
 
-------------------------------------------------------------------------
+---
 
-## Konfiguration
+## Configuration
 
-Die Konfiguration erfolgt über die Admin-Oberfläche (jsonConfig):
+Configuration is done via the Admin UI (jsonConfig):
 
-| Option | Beschreibung | Standard |
-|--------|--------------|----------|
-| **Port** | HTTP-Port des Servers | 8123 |
-| **Redirect URL** | Ziel-URL für das Display (z.B. VIS) | *muss gesetzt werden* |
-| **mDNS aktivieren** | Avahi Service Discovery | aktiviert |
-| **Service-Name** | Name im Netzwerk | "ioBroker" |
-| **Auth aktivieren** | Credentials prüfen | deaktiviert |
-| **Benutzername** | Login-Name (wenn Auth aktiv) | "admin" |
-| **Passwort** | Login-Passwort (verschlüsselt gespeichert) | - |
+| Option | Description | Default |
+|--------|-------------|---------|
+| **Port** | HTTP port for the server | 8123 |
+| **Bind to Interface** | Network interface to listen on | 0.0.0.0 (all) |
+| **Redirect URL** | Target URL for the display (e.g., VIS) | *must be set* |
+| **mDNS Enabled** | Avahi Service Discovery | enabled |
+| **Service Name** | Name in the network | "ioBroker" |
+| **Auth Required** | Validate credentials | disabled |
+| **Username** | Login name (if auth enabled) | "admin" |
+| **Password** | Login password (stored encrypted) | - |
 
-**Wichtig:** Die Redirect URL muss eine im Netzwerk erreichbare Adresse sein, z.B.:
+**Important:** The redirect URL must be a network-accessible address, e.g.:
 ```
 http://192.168.1.100:8082/vis/index.html
 ```
 
-`localhost` funktioniert nicht, da das Display die URL aufruft!
+`localhost` will not work because the display calls the URL!
 
-------------------------------------------------------------------------
+---
+
+## mDNS Note
+
+The adapter registers a `_home-assistant._tcp` service via Avahi for automatic discovery.
+
+In my tests, automatic discovery did not work reliably. Manual configuration works stably:
+
+```
+IP:   <ioBroker-IP>
+Port: 8123
+```
+
+---
 
 ## Troubleshooting
 
-### Display findet den Server nicht (mDNS)
+### Display cannot find the server (mDNS)
 
-1. Prüfe ob Avahi läuft:
+1. Check if Avahi is running:
    ```bash
    systemctl status avahi-daemon
    ```
 
-2. Prüfe ob der Service registriert ist:
+2. Check if the service is registered:
    ```bash
    avahi-browse _home-assistant._tcp -r -t
    ```
 
-3. Falls mDNS nicht funktioniert, nutze die manuelle Konfiguration am Display mit der IP-Adresse des ioBroker-Servers.
+3. If mDNS doesn't work, use manual configuration on the display with the ioBroker server's IP address.
 
-### Avahi Berechtigungsfehler
+### Avahi Permission Error
 
 ```bash
 sudo chown iobroker /etc/avahi/services
 ```
 
-### Health-Check
+### Health Check
 
-Der Adapter bietet einen Health-Endpoint:
+The adapter provides a health endpoint:
 ```
 http://<IP>:8123/health
 ```
 
-------------------------------------------------------------------------
+---
 
-## Entwicklung
+## Development
 
-Der Adapter ist vollständig in **TypeScript** geschrieben mit `strict` Mode.
+The adapter is written entirely in **TypeScript** with `strict` mode.
 
 ```bash
 # Build
 npm run build
 
-# Tests (95 Tests)
+# Tests (99 tests)
 npm test
 
 # Lint
 npm run lint
 
-# Watch-Mode für Entwicklung
+# Watch mode for development
 npm run watch
 ```
 
-### Projektstruktur
+### Project Structure
 
 ```
 src/
-├── main.ts           # Adapter-Hauptklasse
+├── main.ts           # Adapter main class
 └── lib/
-    ├── constants.ts  # Gemeinsame Konstanten
-    ├── types.ts      # TypeScript Interfaces
-    ├── webserver.ts  # Express HTTP Server
-    └── mdns.ts       # Avahi mDNS Service
-test/                 # TypeScript Tests
-build/                # Kompilierter JavaScript Code
+    ├── constants.ts  # Shared constants
+    ├── types.ts      # TypeScript interfaces
+    ├── webserver.ts  # Express HTTP server
+    └── mdns.ts       # Avahi mDNS service
+test/                 # TypeScript tests
+build/                # Compiled JavaScript code
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Changelog
 
-Siehe [CHANGELOG.md](CHANGELOG.md) für die vollständige Versionshistorie.
+### 0.7.0 (2026-03-16)
+- Added network interface selection dropdown for bind address
 
-------------------------------------------------------------------------
+### 0.6.3 (2026-03-15)
+- Fixed repository URL format for Admin UI GitHub installation
 
-## Lizenz
+### 0.6.2 (2026-03-15)
+- Added complete JSDoc documentation
+- ESLint now passes without warnings
 
-MIT License - siehe [LICENSE](LICENSE)
+### 0.6.1 (2026-03-15)
+- Added GitHub Actions CI and release workflows
 
-------------------------------------------------------------------------
+### 0.6.0 (2026-03-14)
+- Migrated to TypeScript with strict mode
 
-*Entwickelt mit Unterstützung von Claude.ai*
+### 0.5.0 (2026-03-13)
+- Express 5 upgrade
+- All dependencies updated to March 2026 versions
+
+### 0.4.0 (2026-03-12)
+- Updated for js-controller 7 & Admin 7
+- jsonConfig UI
+- Node.js 20+ required
+- encryptedNative for password
+
+### 0.3.0 (2026-03-11)
+- Code cleanup
+- Fixed mDNS XML bug
+- Session cleanup
+- DRY refactor
+
+---
+
+## License
+
+MIT License - see [LICENSE](LICENSE)
+
+Copyright (c) 2026 krobi <krobi@power-dreams.com>
+
+---
+
+*Developed with assistance from Claude.ai*

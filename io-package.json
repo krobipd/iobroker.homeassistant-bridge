@@ -42,17 +42,8 @@
 			"0.3.0": {
 				"en": "Code cleanup: removed uuid/body-parser deps, fixed mDNS XML bug, session cleanup, DRY refactor",
 				"de": "Code-Cleanup: uuid/body-parser entfernt, mDNS XML-Bug gefixt, Session-Cleanup, DRY-Refactor"
-			},
-			"0.2.0": {
-				"en": "Simplified: proxy removed, Avahi-only mDNS, CORS removed",
-				"de": "Vereinfacht: Proxy entfernt, nur Avahi für mDNS, CORS entfernt"
-			},
-			"0.1.0": {
-				"en": "Initial release",
-				"de": "Erstveröffentlichung"
 			}
 		},
-		"title": "Home Assistant Bridge",
 		"titleLang": {
 			"en": "Home Assistant Emulation Bridge",
 			"de": "Home Assistant Emulation Bridge"
@@ -72,9 +63,11 @@
 			"vis",
 			"bridge"
 		],
-		"license": "MIT",
+		"licenseInformation": {
+			"license": "MIT",
+			"type": "free"
+		},
 		"platform": "Javascript/Node.js",
-		"main": "build/main.js",
 		"icon": "homeassistant-bridge.svg",
 		"extIcon": "https://raw.githubusercontent.com/krobipd/iobroker.homeassistant-bridge/main/admin/homeassistant-bridge.svg",
 		"readme": "https://github.com/krobipd/iobroker.homeassistant-bridge/blob/main/README.md",
@@ -105,7 +98,7 @@
 		],
 		"globalDependencies": [
 			{
-				"admin": ">=7.0.0"
+				"admin": ">=7.6.17"
 			}
 		]
 	},
