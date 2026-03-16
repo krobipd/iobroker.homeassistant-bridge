@@ -3,6 +3,19 @@
 		"name": "homeassistant-bridge",
 		"version": "0.8.1",
 		"news": {
+			"0.8.1": {
+				"en": "Fix automated release pipeline (remove legacy workflows)",
+				"de": "Automatische Release-Pipeline korrigiert (veraltete Workflows entfernt)",
+				"ru": "Исправлен автоматический конвейер выпуска (удалены устаревшие рабочие процессы)",
+				"pt": "Correção do pipeline de lançamento automatizado (remoção de workflows legados)",
+				"nl": "Automatische release-pipeline gecorrigeerd (verouderde workflows verwijderd)",
+				"fr": "Correction du pipeline de release automatisé (suppression des workflows obsolètes)",
+				"it": "Correzione del pipeline di rilascio automatizzato (rimozione dei workflow legacy)",
+				"es": "Corrección del pipeline de lanzamiento automatizado (eliminación de workflows heredados)",
+				"pl": "Naprawiono automatyczny potok wydań (usunięto przestarzałe przepływy pracy)",
+				"uk": "Виправлено автоматичний конвеєр випуску (видалено застарілі робочі процеси)",
+				"zh-cn": "修复自动化发布流水线（移除旧版工作流）"
+			},
 			"0.8.0": {
 				"en": "ioBroker repository compliance: official testing actions, all translations, donation link",
 				"de": "ioBroker Repository-Konformität: offizielle Test-Actions, alle Übersetzungen, Spendenlink",
