@@ -7,9 +7,13 @@ npm-debug.log*
 
 # IDE
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 *.swp
 *.swo
+
+# ioBroker repochecker
+.commitinfo
 
 # ioBroker
 admin/i18n/flat.txt

@@ -5,40 +5,121 @@
 		"news": {
 			"0.7.0": {
 				"en": "Added network interface selection dropdown for bind address",
-				"de": "Netzwerk-Interface-Auswahl für Bind-Adresse hinzugefügt"
+				"de": "Netzwerk-Interface-Auswahl für Bind-Adresse hinzugefügt",
+				"ru": "Добавлен выбор сетевого интерфейса для адреса привязки",
+				"pt": "Adicionada seleção de interface de rede para endereço de ligação",
+				"nl": "Netwerkintefaceselectie toegevoegd voor bindadres",
+				"fr": "Ajout de la sélection d'interface réseau pour l'adresse de liaison",
+				"it": "Aggiunta selezione dell'interfaccia di rete per l'indirizzo di binding",
+				"es": "Añadida selección de interfaz de red para dirección de enlace",
+				"pl": "Dodano wybór interfejsu sieciowego dla adresu powiązania",
+				"uk": "Додано вибір мережевого інтерфейсу для адреси прив'язки",
+				"zh-cn": "为绑定地址添加了网络接口选择下拉菜单"
 			},
 			"0.6.3": {
 				"en": "Fixed repository URL format for Admin UI GitHub installation",
-				"de": "Repository-URL-Format für Admin-UI GitHub-Installation korrigiert"
+				"de": "Repository-URL-Format für Admin-UI GitHub-Installation korrigiert",
+				"ru": "Исправлен формат URL репозитория для установки через Admin UI GitHub",
+				"pt": "Formato de URL do repositório corrigido para instalação do GitHub da Admin UI",
+				"nl": "URL-formaat van repository gecorrigeerd voor Admin UI GitHub-installatie",
+				"fr": "Format d'URL du dépôt corrigé pour l'installation GitHub de l'interface Admin",
+				"it": "Corretto il formato dell'URL del repository per l'installazione GitHub dell'Admin UI",
+				"es": "Corregido el formato de URL del repositorio para la instalación de GitHub en la UI de administración",
+				"pl": "Naprawiono format adresu URL repozytorium dla instalacji GitHub w interfejsie administratora",
+				"uk": "Виправлено формат URL репозиторію для встановлення через Admin UI GitHub",
+				"zh-cn": "修复了Admin UI GitHub安装的存储库URL格式"
 			},
 			"0.6.2": {
 				"en": "Added complete JSDoc documentation, ESLint now passes without warnings",
-				"de": "Vollständige JSDoc-Dokumentation hinzugefügt, ESLint läuft jetzt ohne Warnungen"
+				"de": "Vollständige JSDoc-Dokumentation hinzugefügt, ESLint läuft jetzt ohne Warnungen",
+				"ru": "Добавлена полная JSDoc-документация, ESLint теперь проходит без предупреждений",
+				"pt": "Adicionada documentação JSDoc completa, ESLint agora passa sem avisos",
+				"nl": "Volledige JSDoc-documentatie toegevoegd, ESLint geeft nu geen waarschuwingen meer",
+				"fr": "Documentation JSDoc complète ajoutée, ESLint passe maintenant sans avertissements",
+				"it": "Aggiunta documentazione JSDoc completa, ESLint ora passa senza avvisi",
+				"es": "Añadida documentación JSDoc completa, ESLint ahora pasa sin advertencias",
+				"pl": "Dodano pełną dokumentację JSDoc, ESLint teraz działa bez ostrzeżeń",
+				"uk": "Додано повну JSDoc-документацію, ESLint тепер проходить без попереджень",
+				"zh-cn": "添加了完整的JSDoc文档，ESLint现在无警告通过"
 			},
 			"0.6.1": {
 				"en": "Added GitHub Actions CI and release workflows",
-				"de": "GitHub Actions CI und Release Workflows hinzugefügt"
+				"de": "GitHub Actions CI und Release Workflows hinzugefügt",
+				"ru": "Добавлены рабочие процессы CI и выпуска GitHub Actions",
+				"pt": "Adicionados fluxos de trabalho de CI e lançamento do GitHub Actions",
+				"nl": "GitHub Actions CI- en release-workflows toegevoegd",
+				"fr": "Ajout des workflows CI et de release GitHub Actions",
+				"it": "Aggiunti workflow CI e di rilascio GitHub Actions",
+				"es": "Añadidos flujos de trabajo de CI y lanzamiento de GitHub Actions",
+				"pl": "Dodano przepływy pracy CI i wydania GitHub Actions",
+				"uk": "Додано робочі процеси CI та випуску GitHub Actions",
+				"zh-cn": "添加了GitHub Actions CI和发布工作流"
 			},
 			"0.6.0": {
 				"en": "Migrated to TypeScript with strict mode",
-				"de": "Migration auf TypeScript mit strict mode"
+				"de": "Migration auf TypeScript mit strict mode",
+				"ru": "Переход на TypeScript со строгим режимом",
+				"pt": "Migrado para TypeScript com modo estrito",
+				"nl": "Gemigreerd naar TypeScript met strikte modus",
+				"fr": "Migration vers TypeScript avec le mode strict",
+				"it": "Migrato a TypeScript con modalità strict",
+				"es": "Migrado a TypeScript con modo estricto",
+				"pl": "Migracja do TypeScript z trybem ścisłym",
+				"uk": "Перехід на TypeScript зі суворим режимом",
+				"zh-cn": "迁移到TypeScript严格模式"
 			},
 			"0.5.2": {
 				"en": "Switched to official @iobroker/eslint-config with Prettier",
-				"de": "Umstellung auf offizielle @iobroker/eslint-config mit Prettier"
+				"de": "Umstellung auf offizielle @iobroker/eslint-config mit Prettier",
+				"ru": "Переключение на официальную @iobroker/eslint-config с Prettier",
+				"pt": "Alternado para @iobroker/eslint-config oficial com Prettier",
+				"nl": "Overgeschakeld naar officiële @iobroker/eslint-config met Prettier",
+				"fr": "Passage à la configuration officielle @iobroker/eslint-config avec Prettier",
+				"it": "Passato alla configurazione ufficiale @iobroker/eslint-config con Prettier",
+				"es": "Cambiado a @iobroker/eslint-config oficial con Prettier",
+				"pl": "Przełączono na oficjalną @iobroker/eslint-config z Prettier",
+				"uk": "Перехід на офіційну @iobroker/eslint-config з Prettier",
+				"zh-cn": "切换到官方@iobroker/eslint-config和Prettier"
 			},
 			"0.5.1": {
 				"en": "Updated emulated Home Assistant version to 2026.3.1",
-				"de": "Emulierte Home Assistant Version auf 2026.3.1 aktualisiert"
+				"de": "Emulierte Home Assistant Version auf 2026.3.1 aktualisiert",
+				"ru": "Обновлена эмулируемая версия Home Assistant до 2026.3.1",
+				"pt": "Versão emulada do Home Assistant atualizada para 2026.3.1",
+				"nl": "Geëmuleerde Home Assistant versie bijgewerkt naar 2026.3.1",
+				"fr": "Version Home Assistant émulée mise à jour vers 2026.3.1",
+				"it": "Versione Home Assistant emulata aggiornata a 2026.3.1",
+				"es": "Versión de Home Assistant emulada actualizada a 2026.3.1",
+				"pl": "Zaktualizowano emulowaną wersję Home Assistant do 2026.3.1",
+				"uk": "Оновлено версію емульованого Home Assistant до 2026.3.1",
+				"zh-cn": "将模拟的Home Assistant版本更新至2026.3.1"
 			}
 		},
 		"titleLang": {
 			"en": "Home Assistant Emulation Bridge",
-			"de": "Home Assistant Emulation Bridge"
+			"de": "Home Assistant Emulation Bridge",
+			"ru": "Мост эмуляции Home Assistant",
+			"pt": "Ponte de Emulação do Home Assistant",
+			"nl": "Home Assistant Emulatiebrug",
+			"fr": "Pont d'Émulation Home Assistant",
+			"it": "Bridge di Emulazione Home Assistant",
+			"es": "Puente de Emulación de Home Assistant",
+			"pl": "Most emulacji Home Assistant",
+			"uk": "Міст емуляції Home Assistant",
+			"zh-cn": "Home Assistant仿真桥"
 		},
 		"desc": {
 			"en": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
-			"de": "Emuliert einen minimalen Home Assistant Server, sodass Geräte mit Home-Assistant-Dashboard-Unterstützung beliebige Web-URLs anzeigen können."
+			"de": "Emuliert einen minimalen Home Assistant Server, sodass Geräte mit Home-Assistant-Dashboard-Unterstützung beliebige Web-URLs anzeigen können.",
+			"ru": "Эмулирует минимальный сервер Home Assistant, чтобы устройства, ожидающие панель управления Home Assistant, могли отображать любой пользовательский URL.",
+			"pt": "Emula um servidor Home Assistant mínimo para que dispositivos que esperam um painel do Home Assistant possam exibir qualquer URL web personalizado.",
+			"nl": "Emuleert een minimale Home Assistant server zodat apparaten die een Home Assistant dashboard verwachten elke aangepaste web-URL kunnen weergeven.",
+			"fr": "Émule un serveur Home Assistant minimal pour que les appareils attendant un tableau de bord Home Assistant puissent afficher n'importe quelle URL web personnalisée.",
+			"it": "Emula un server Home Assistant minimale in modo che i dispositivi che si aspettano una dashboard Home Assistant possano visualizzare qualsiasi URL web personalizzato.",
+			"es": "Emula un servidor Home Assistant mínimo para que los dispositivos que esperan un panel de Home Assistant puedan mostrar cualquier URL web personalizada.",
+			"pl": "Emuluje minimalny serwer Home Assistant, dzięki czemu urządzenia oczekujące pulpitu nawigacyjnego Home Assistant mogą wyświetlać dowolny niestandardowy adres URL.",
+			"uk": "Емулює мінімальний сервер Home Assistant, щоб пристрої, що очікують панель Home Assistant, могли відображати будь-яку користувацьку URL-адресу.",
+			"zh-cn": "模拟一个最小的Home Assistant服务器，使期望Home Assistant仪表板的设备能够显示任何自定义网址。"
 		},
 		"authors": [
 			"krobi <krobi@power-dreams.com>"
@@ -73,12 +154,6 @@
 		"supportedMessages": {
 			"stopInstance": true
 		},
-		"encryptedNative": [
-			"password"
-		],
-		"protectedNative": [
-			"password"
-		],
 		"dependencies": [
 			{
 				"js-controller": ">=7.0.0"
@@ -86,10 +161,16 @@
 		],
 		"globalDependencies": [
 			{
-				"admin": ">=7.6.17"
+				"admin": ">=7.6.20"
 			}
 		]
 	},
+	"encryptedNative": [
+		"password"
+	],
+	"protectedNative": [
+		"password"
+	],
 	"native": {
 		"port": 8123,
 		"bindAddress": "0.0.0.0",

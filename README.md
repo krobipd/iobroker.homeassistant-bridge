@@ -51,7 +51,7 @@ The display recognizes the bridge as a Home Assistant server.
 
 - **Node.js >= 20**
 - **ioBroker js-controller >= 7.0.0**
-- **ioBroker Admin >= 7.6.17**
+- **ioBroker Admin >= 7.6.20**
 - Linux system with Avahi (for mDNS)
 
 ---
