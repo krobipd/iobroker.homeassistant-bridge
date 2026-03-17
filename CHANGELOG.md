@@ -2,6 +2,9 @@
 
 ## **WORK IN PROGRESS**
 
+- Migrate to @alcalzone/release-script for automated releases
+- Enable npm Trusted Publishing (OIDC), remove legacy npm token
+
 ## v0.6.2 — JSDoc Documentation (15. März 2026)
 
 ### Verbesserungen
