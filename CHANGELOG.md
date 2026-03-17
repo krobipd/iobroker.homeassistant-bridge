@@ -1,5 +1,7 @@
 # Changelog
 
+## **WORK IN PROGRESS**
+
 ## v0.6.2 — JSDoc Documentation (15. März 2026)
 
 ### Verbesserungen

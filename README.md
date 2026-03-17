@@ -59,12 +59,6 @@ The display recognizes the bridge as a Home Assistant server.
 
 ---
 
-## Installation
-
-Install via the ioBroker Admin UI: **Adapters → Search for "homeassistant-bridge"**.
-
----
-
 ## Configuration
 
 Configuration is done via the Admin UI (jsonConfig):
