@@ -1,4 +1,10 @@
 # Changelog
+## **WORK IN PROGRESS**
+
+- Remove unused `info.clients` state (was a misleading cumulative counter, not actual active connections)
+- Remove dead code: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`
+- Simplify `createSession` signature
+
 ## 0.8.2 (2026-03-17)
 
 - Migrate to @alcalzone/release-script for automated releases

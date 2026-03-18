@@ -164,19 +164,6 @@
         "def": false
       },
       "native": {}
-    },
-    {
-      "_id": "info.clients",
-      "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Connected Shelly Displays",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
-      "native": {}
     }
   ]
 }

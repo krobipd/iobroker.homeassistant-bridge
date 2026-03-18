@@ -36,7 +36,6 @@ class HomeAssistantBridge extends utils.Adapter {
 
         try {
             await this.setStateAsync('info.connection', false, true);
-            await this.setStateAsync('info.clients', 0, true);
 
             // Validate configuration
             if (!this.config.visUrl) {

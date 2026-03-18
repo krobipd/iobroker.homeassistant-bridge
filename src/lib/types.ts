@@ -26,8 +26,6 @@ export interface AdapterConfig {
 export interface SessionData {
     /** Timestamp when the session was created */
     created: number;
-    /** Optional flow ID for tracking authentication flow */
-    flowId?: string;
 }
 
 /** Minimal adapter interface for dependency injection */
@@ -39,6 +37,4 @@ export interface AdapterInterface {
         warn: (msg: string) => void;
         error: (msg: string) => void;
     };
-    /** Set adapter state asynchronously */
-    setStateAsync: (id: string, value: ioBroker.StateValue, ack: boolean) => ioBroker.SetStatePromise;
 }

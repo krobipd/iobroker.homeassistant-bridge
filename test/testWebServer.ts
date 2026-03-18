@@ -11,7 +11,6 @@ interface MockAdapter {
         warn: () => void;
         error: () => void;
     };
-    setStateAsync: () => Promise<void>;
 }
 
 // Mock adapter for testing
@@ -23,7 +22,6 @@ function createMockAdapter(): MockAdapter {
             warn: (): void => {},
             error: (): void => {},
         },
-        setStateAsync: (): Promise<void> => Promise.resolve(),
     };
 }
 
@@ -324,10 +322,11 @@ describe('WebServer', () => {
             });
 
             expect(res.statusCode).to.equal(200);
-            const body = res.body as { status: string; adapter: string; version: string };
+            const body = res.body as { status: string; adapter: string; version: string; config: object };
             expect(body.status).to.equal('ok');
             expect(body.adapter).to.equal('homeassistant-bridge');
             expect(body.version).to.equal(HA_VERSION);
+            expect(body.config).to.be.an('object');
         });
 
         it('GET /manifest.json should return PWA manifest', async () => {
