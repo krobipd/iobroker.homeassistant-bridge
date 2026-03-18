@@ -163,6 +163,9 @@ build/                # Compiled JavaScript code
 
 ## Changelog
 
+### 0.8.3 (2026-03-18)
+- Remove unused `info.clients` state and dead code cleanup
+
 ### 0.8.2 (2026-03-17)
 - Migrate to @alcalzone/release-script, enable npm Trusted Publishing
 
