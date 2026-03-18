@@ -1,5 +1,5 @@
 # Changelog
-## **WORK IN PROGRESS**
+## 0.8.3 (2026-03-18)
 
 - Remove unused `info.clients` state (was a misleading cumulative counter, not actual active connections)
 - Remove dead code: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`
