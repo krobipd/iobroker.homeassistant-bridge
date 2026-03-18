@@ -51,7 +51,6 @@ class HomeAssistantBridge extends utils.Adapter {
         this.log.info('Starting Home Assistant Bridge...');
         try {
             await this.setStateAsync('info.connection', false, true);
-            await this.setStateAsync('info.clients', 0, true);
             // Validate configuration
             if (!this.config.visUrl) {
                 this.log.error('No redirect URL configured! Please configure a URL in the adapter settings.');

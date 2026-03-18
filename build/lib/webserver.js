@@ -14,7 +14,6 @@ class WebServer {
     app;
     server = null;
     sessions = new Map();
-    connectedClients = 0;
     cleanupTimer = null;
     instanceUuid;
     /**
@@ -52,11 +51,9 @@ class WebServer {
      * Create a session entry with automatic expiration
      *
      * @param key - Unique session identifier
-     * @param data - Additional session data
      */
-    createSession(key, data = {}) {
-        this.sessions.set(key, { ...data, created: Date.now() });
-        return key;
+    createSession(key) {
+        this.sessions.set(key, { created: Date.now() });
     }
     /** Periodic cleanup of expired sessions */
     cleanupSessions() {
@@ -184,7 +181,7 @@ class WebServer {
             // Auth OK — generate code
             this.sessions.delete(flowId);
             const code = node_crypto_1.default.randomUUID();
-            this.createSession(code, { flowId });
+            this.createSession(code);
             this.adapter.log.info('Auth flow completed — code issued');
             this.json(res, {
                 version: 1,
@@ -201,8 +198,6 @@ class WebServer {
             const { code, grant_type } = req.body;
             if (grant_type === 'authorization_code' && code && this.sessions.has(code)) {
                 this.sessions.delete(code);
-                this.connectedClients++;
-                void this.adapter.setStateAsync('info.clients', this.connectedClients, true);
                 this.adapter.log.info('Display authenticated successfully');
                 this.json(res, {
                     access_token: node_crypto_1.default.randomUUID(),
@@ -234,7 +229,6 @@ class WebServer {
                 status: 'ok',
                 adapter: 'homeassistant-bridge',
                 version: constants_1.HA_VERSION,
-                clients: this.connectedClients,
                 config: {
                     mdns: this.config.mdnsEnabled,
                     auth: this.config.authRequired,
