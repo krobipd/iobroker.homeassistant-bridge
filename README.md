@@ -39,7 +39,6 @@ Configuration is done via the Admin UI (jsonConfig):
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| **Port** | HTTP port for the server | 8123 |
 | **Bind to Interface** | Network interface to listen on | 0.0.0.0 (all) |
 | **Redirect URL** | Target URL for the display (e.g., VIS) | *must be set* |
 | **mDNS Enabled** | Avahi Service Discovery | enabled |
@@ -47,6 +46,8 @@ Configuration is done via the Admin UI (jsonConfig):
 | **Auth Required** | Validate credentials | disabled |
 | **Username** | Login name (if auth enabled) | "admin" |
 | **Password** | Login password (stored encrypted) | - |
+
+> **Important: Port 8123 is mandatory.** The adapter always listens on port 8123 — this is hardcoded and cannot be changed. Shelly displays and other Home Assistant-compatible devices expect exactly this port. Make sure port 8123 is not already in use on your ioBroker server.
 
 **Important:** The redirect URL must be a network-accessible address, e.g.:
 ```
