@@ -211,7 +211,7 @@ export class WebServer {
             this.sessions.delete(flowId);
             const code = crypto.randomUUID();
             this.createSession(code);
-            this.adapter.log.info('Auth flow completed — code issued');
+            this.adapter.log.debug('Auth flow completed — code issued');
 
             this.json(res, {
                 version: 1,
@@ -230,7 +230,7 @@ export class WebServer {
 
             if (grant_type === 'authorization_code' && code && this.sessions.has(code)) {
                 this.sessions.delete(code);
-                this.adapter.log.info('Display authenticated successfully');
+                this.adapter.log.debug('Display authenticated successfully');
 
                 this.json(res, {
                     access_token: crypto.randomUUID(),
@@ -302,7 +302,7 @@ export class WebServer {
                 );
                 return;
             }
-            this.adapter.log.info(`Redirecting to: ${this.config.visUrl}`);
+            this.adapter.log.debug(`Redirecting to: ${this.config.visUrl}`);
             res.redirect(this.config.visUrl);
         });
     }

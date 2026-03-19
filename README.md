@@ -98,6 +98,9 @@ http://<IP>:8123/health
 
 ## Changelog
 
+### 0.8.4 (2026-03-19)
+- Logging cleanup: auth flow, redirect and config details moved to debug; remove redundant start/stop messages
+
 ### 0.8.3 (2026-03-18)
 - Remove unused `info.clients` state and dead code cleanup
 
@@ -109,9 +112,6 @@ http://<IP>:8123/health
 
 ### 0.8.0 (2026-03-16)
 - ioBroker repository compliance: official testing actions, all translations, donation link
-
-### 0.7.0 (2026-03-16)
-- Added network interface selection dropdown for bind address
 
 Older changelog: [CHANGELOG.md](CHANGELOG.md)
 

@@ -32,8 +32,6 @@ class HomeAssistantBridge extends utils.Adapter {
     }
 
     private async onReady(): Promise<void> {
-        this.log.info('Starting Home Assistant Bridge...');
-
         try {
             await this.setStateAsync('info.connection', false, true);
 
@@ -53,10 +51,10 @@ class HomeAssistantBridge extends utils.Adapter {
                 serviceName: this.config.serviceName || 'ioBroker',
             };
 
-            this.log.info(`Config: port=${config.port}, auth=${config.authRequired}, mdns=${config.mdnsEnabled}`);
+            this.log.debug(`Config: port=${config.port}, auth=${config.authRequired}, mdns=${config.mdnsEnabled}`);
 
             if (config.visUrl) {
-                this.log.info(`Target URL: ${config.visUrl}`);
+                this.log.debug(`Target URL: ${config.visUrl}`);
 
                 if (/\blocalhost\b|127\.0\.0\.1/.test(config.visUrl)) {
                     this.log.warn(
@@ -72,7 +70,7 @@ class HomeAssistantBridge extends utils.Adapter {
                 this.mdnsService = new MDNSService(this, config);
                 this.mdnsService.start();
             } else {
-                this.log.info('mDNS disabled — enter URL manually on the display');
+                this.log.debug('mDNS disabled — enter URL manually on the display');
             }
 
             await this.setStateAsync('info.connection', true, true);
@@ -88,8 +86,6 @@ class HomeAssistantBridge extends utils.Adapter {
 
     private async onUnload(callback: () => void): Promise<void> {
         try {
-            this.log.info('Shutting down...');
-
             if (this.mdnsService) {
                 this.mdnsService.stop();
                 this.mdnsService = null;

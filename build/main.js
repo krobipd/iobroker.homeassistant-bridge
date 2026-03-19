@@ -48,7 +48,6 @@ class HomeAssistantBridge extends utils.Adapter {
         this.on('unload', this.onUnload.bind(this));
     }
     async onReady() {
-        this.log.info('Starting Home Assistant Bridge...');
         try {
             await this.setStateAsync('info.connection', false, true);
             // Validate configuration
@@ -65,9 +64,9 @@ class HomeAssistantBridge extends utils.Adapter {
                 mdnsEnabled: this.config.mdnsEnabled !== false,
                 serviceName: this.config.serviceName || 'ioBroker',
             };
-            this.log.info(`Config: port=${config.port}, auth=${config.authRequired}, mdns=${config.mdnsEnabled}`);
+            this.log.debug(`Config: port=${config.port}, auth=${config.authRequired}, mdns=${config.mdnsEnabled}`);
             if (config.visUrl) {
-                this.log.info(`Target URL: ${config.visUrl}`);
+                this.log.debug(`Target URL: ${config.visUrl}`);
                 if (/\blocalhost\b|127\.0\.0\.1/.test(config.visUrl)) {
                     this.log.warn('visUrl contains localhost — the display cannot reach this! Use the real IP address.');
                 }
@@ -79,7 +78,7 @@ class HomeAssistantBridge extends utils.Adapter {
                 this.mdnsService.start();
             }
             else {
-                this.log.info('mDNS disabled — enter URL manually on the display');
+                this.log.debug('mDNS disabled — enter URL manually on the display');
             }
             await this.setStateAsync('info.connection', true, true);
             this.log.info('Home Assistant Bridge running');
@@ -94,7 +93,6 @@ class HomeAssistantBridge extends utils.Adapter {
     }
     async onUnload(callback) {
         try {
-            this.log.info('Shutting down...');
             if (this.mdnsService) {
                 this.mdnsService.stop();
                 this.mdnsService = null;

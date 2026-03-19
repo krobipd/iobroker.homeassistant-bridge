@@ -1,4 +1,8 @@
 # Changelog
+## 0.8.4 (2026-03-19)
+
+- Logging cleanup: auth flow, redirect, config details moved to debug level; remove redundant start/stop info messages
+
 ## 0.8.3 (2026-03-18)
 
 - Remove unused `info.clients` state (was a misleading cumulative counter, not actual active connections)
