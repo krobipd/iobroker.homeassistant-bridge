@@ -33,6 +33,14 @@ Emulates a minimal Home Assistant server so that devices like the **Shelly Wall 
 
 ---
 
+## Ports
+
+| Port | Protocol | Purpose | Configurable |
+|------|----------|---------|--------------|
+| 8123 | TCP/HTTP | Home Assistant emulation (Shelly requires exactly this port) | No — fixed |
+
+---
+
 ## Configuration
 
 Configuration is done via the Admin UI (jsonConfig):
