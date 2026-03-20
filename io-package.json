@@ -94,19 +94,6 @@
         "uk": "Відповідність репозиторію ioBroker: офіційні тестові actions, всі переклади, посилання для пожертв",
         "zh-cn": "ioBroker存储库合规性：官方测试actions、所有翻译、捐款链接"
       },
-      "0.7.0": {
-        "en": "Added network interface selection dropdown for bind address",
-        "de": "Netzwerk-Interface-Auswahl für Bind-Adresse hinzugefügt",
-        "ru": "Добавлен выбор сетевого интерфейса для адреса привязки",
-        "pt": "Adicionada seleção de interface de rede para endereço de ligação",
-        "nl": "Netwerkintefaceselectie toegevoegd voor bindadres",
-        "fr": "Ajout de la sélection d'interface réseau pour l'adresse de liaison",
-        "it": "Aggiunta selezione dell'interfaccia di rete per l'indirizzo di binding",
-        "es": "Añadida selección de interfaz de red para dirección de enlace",
-        "pl": "Dodano wybór interfejsu sieciowego dla adresu powiązania",
-        "uk": "Додано вибір мережевого інтерфейсу для адреси прив'язки",
-        "zh-cn": "为绑定地址添加了网络接口选择下拉菜单"
-      }
     },
     "titleLang": {
       "en": "Home Assistant Emulation Bridge",
