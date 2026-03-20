@@ -113,14 +113,23 @@ admin/
 
 ## Status
 
-**Auf npm veröffentlicht** ✅ — `iobroker.homeassistant-bridge@0.8.3`
+**Auf npm veröffentlicht** ✅ — `iobroker.homeassistant-bridge@0.8.6`
 **ioBroker Repository PR** ✅ — https://github.com/ioBroker/ioBroker.repositories/pull/5642 (ausstehend)
 **Release-Pipeline** ✅ — vollautomatisch via `test-and-release.yml` (einziger Workflow!)
+
+## i18n
+
+- Struktur: `admin/i18n/{lang}/translations.json` (Unterordner pro Sprache)
+- Alle 11 Sprachen vollständig übersetzt: en, de, ru, pt, nl, fr, it, es, pl, uk, zh-cn
+- Kurze semantische Keys (z.B. `bindAddress`, `visUrlTooltip`, `mdnsInfo`) — KEINE langen englischen Sätze als Keys!
 
 ## Versionshistorie (Kurzfassung)
 
 | Version | Änderungen |
 |---------|------------|
+| 0.8.6 | Admin UI i18n: alle 11 Sprachen, kurze semantische Keys |
+| 0.8.5 | Admin UI: Port-Feld entfernt (8123 fix), bindAddress zuerst; README Ports-Sektion |
+| 0.8.4 | Logging cleanup: auth/redirect/config auf debug |
 | 0.8.3 | Code cleanup: info.clients entfernt (misleading), dead code, DRY |
 | 0.8.2 | npm Trusted Publishing fix: case-sensitive Repo-Name (ioBroker großes B) |
 | 0.8.1 | Release-Pipeline Fix (alte Workflows entfernt, permissions hinzugefügt) |
