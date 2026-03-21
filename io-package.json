@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "homeassistant-bridge",
-    "version": "0.8.6",
+    "version": "0.8.7",
     "news": {
+      "0.8.7": {
+        "en": "Fix repository URL format for Admin UI GitHub installation",
+        "de": "Repository-URL-Format für Admin UI GitHub-Installation korrigiert",
+        "ru": "Исправлен формат URL репозитория для установки через Admin UI с GitHub",
+        "pt": "Corrigido o formato do URL do repositório para instalação via Admin UI do GitHub",
+        "nl": "Repository URL-formaat gecorrigeerd voor Admin UI GitHub-installatie",
+        "fr": "Correction du format de l'URL du dépôt pour l'installation via Admin UI GitHub",
+        "it": "Corretto il formato dell'URL del repository per l'installazione tramite Admin UI GitHub",
+        "es": "Corregido el formato de la URL del repositorio para la instalación mediante Admin UI de GitHub",
+        "pl": "Naprawiono format URL repozytorium dla instalacji z GitHub przez Admin UI",
+        "uk": "Виправлено формат URL репозиторію для встановлення через Admin UI з GitHub",
+        "zh-cn": "修复存储库URL格式以支持通过管理界面从GitHub安装"
+      },
       "0.8.6": {
         "en": "Admin UI fully translated into all 11 languages; i18n refactored to use short semantic keys",
         "de": "Admin UI vollständig in alle 11 Sprachen übersetzt; i18n auf kurze semantische Keys umgestellt",
@@ -80,19 +93,6 @@
         "pl": "Naprawiono automatyczny potok wydań (usunięto przestarzałe przepływy pracy)",
         "uk": "Виправлено автоматичний конвеєр випуску (видалено застарілі робочі процеси)",
         "zh-cn": "修复自动化发布流水线（移除旧版工作流）"
-      },
-      "0.8.0": {
-        "en": "ioBroker repository compliance: official testing actions, all translations, donation link",
-        "de": "ioBroker Repository-Konformität: offizielle Test-Actions, alle Übersetzungen, Spendenlink",
-        "ru": "Соответствие репозиторию ioBroker: официальные тестовые actions, все переводы, ссылка для пожертвований",
-        "pt": "Conformidade com repositório ioBroker: actions de teste oficiais, todas traduções, link de doação",
-        "nl": "ioBroker repository-conformiteit: officiële test-actions, alle vertalingen, donatie-link",
-        "fr": "Conformité au dépôt ioBroker: actions de test officielles, toutes les traductions, lien de don",
-        "it": "Conformità al repository ioBroker: actions di test ufficiali, tutte le traduzioni, link donazione",
-        "es": "Conformidad con el repositorio ioBroker: actions de prueba oficiales, todas las traducciones, enlace de donación",
-        "pl": "Zgodność z repozytorium ioBroker: oficjalne actions testowe, wszystkie tłumaczenia, link do darowizny",
-        "uk": "Відповідність репозиторію ioBroker: офіційні тестові actions, всі переклади, посилання для пожертв",
-        "zh-cn": "ioBroker存储库合规性：官方测试actions、所有翻译、捐款链接"
       }
     },
     "titleLang": {

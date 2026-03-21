@@ -1,6 +1,6 @@
 {
   "name": "iobroker.homeassistant-bridge",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "Emulates a minimal Home Assistant server so devices expecting a Home Assistant dashboard can display any custom web URL.",
   "author": {
     "name": "krobi",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/krobipd/ioBroker.homeassistant-bridge.git"
+    "url": "https://github.com/krobipd/ioBroker.homeassistant-bridge"
   },
   "bugs": {
     "url": "https://github.com/krobipd/ioBroker.homeassistant-bridge/issues"

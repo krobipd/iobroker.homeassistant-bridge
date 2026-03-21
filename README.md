@@ -107,6 +107,9 @@ http://<IP>:8123/health
 
 ## Changelog
 
+### 0.8.7 (2026-03-21)
+- Fix repository URL format for Admin UI GitHub installation
+
 ### 0.8.6 (2026-03-19)
 - Admin UI fully translated into all 11 languages; i18n refactored to use short semantic keys
 
