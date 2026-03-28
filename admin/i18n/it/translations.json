@@ -10,7 +10,6 @@
     "header_auth": "Autenticazione",
     "header_mdns": "Individuazione mDNS",
     "header_server": "Server",
-    "header_support": "Supporto",
     "mdnsEnabled": "Abilita Scoperta mDNS",
     "mdnsEnabledTooltip": "Trasmetti il servizio via mDNS in modo che i dispositivi possano trovarlo automaticamente (richiede Avahi su Linux)",
     "mdnsInfo": "mDNS utilizza Avahi su Linux. Installa con: `sudo apt install avahi-daemon`\n\nSe mDNS è disabilitato o non funziona, inserisci l'URL manualmente sul display:\n`http://YOUR_IP:8123`",
@@ -20,5 +19,6 @@
     "username": "Nome utente",
     "visUrl": "URL di Reindirizzamento",
     "visUrlTooltip": "URL a cui reindirizzare i dispositivi dopo l'autenticazione (es. http://192.168.1.100:8082/vis/)",
-    "warningLocalhost": "**Importante:** Non usare 'localhost' o '127.0.0.1' — usa l'indirizzo IP reale del tuo server ioBroker!"
+    "warningLocalhost": "**Importante:** Non usare 'localhost' o '127.0.0.1' — usa l'indirizzo IP reale del tuo server ioBroker!",
+    "supportHeader": "Supporto"
 }

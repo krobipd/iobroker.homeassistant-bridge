@@ -127,10 +127,10 @@
 			"lg": 12,
 			"xl": 12
 		},
-		"_headerSupport": {
+		"_supportHeader": {
 			"type": "header",
-			"text": "header_support",
-			"size": 4
+			"text": "supportHeader",
+			"size": 5
 		},
 		"_aboutInfo": {
 			"type": "staticText",

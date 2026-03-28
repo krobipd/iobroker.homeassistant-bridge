@@ -116,6 +116,9 @@ http://<IP>:8123/health
 
 ## Changelog
 
+### 0.8.10 (2026-03-28)
+- Consistent admin UI i18n keys, add PayPal to FUNDING.yml
+
 ### 0.8.9 (2026-03-28)
 - Use adapter timer methods, add Windows/macOS to CI, full MIT license text
 
@@ -133,9 +136,6 @@ http://<IP>:8123/health
 
 ### 0.8.4 (2026-03-19)
 - Logging cleanup: auth flow, redirect and config moved to debug
-
-### 0.8.3 (2026-03-18)
-- Remove unused `info.clients` state and dead code cleanup
 
 Older changelog: [CHANGELOG.md](CHANGELOG.md)
 

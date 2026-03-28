@@ -10,7 +10,6 @@
     "header_auth": "Authenticatie",
     "header_mdns": "mDNS-detectie",
     "header_server": "Server",
-    "header_support": "Steun",
     "mdnsEnabled": "mDNS-detectie inschakelen",
     "mdnsEnabledTooltip": "De service via mDNS uitzenden zodat apparaten deze automatisch kunnen vinden (vereist Avahi op Linux)",
     "mdnsInfo": "mDNS gebruikt Avahi op Linux. Installeer met: `sudo apt install avahi-daemon`\n\nAls mDNS uitgeschakeld is of niet werkt, voer de URL handmatig in op het scherm:\n`http://YOUR_IP:8123`",
@@ -20,5 +19,6 @@
     "username": "Gebruikersnaam",
     "visUrl": "Doorstuur-URL",
     "visUrlTooltip": "URL waarnaar apparaten worden doorgestuurd na authenticatie (bijv. http://192.168.1.100:8082/vis/)",
-    "warningLocalhost": "**Belangrijk:** Gebruik geen 'localhost' of '127.0.0.1' — gebruik het echte IP-adres van uw ioBroker-server!"
+    "warningLocalhost": "**Belangrijk:** Gebruik geen 'localhost' of '127.0.0.1' — gebruik het echte IP-adres van uw ioBroker-server!",
+    "supportHeader": "Steun"
 }

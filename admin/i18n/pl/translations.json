@@ -10,7 +10,6 @@
     "header_auth": "Uwierzytelnianie",
     "header_mdns": "Wykrywanie mDNS",
     "header_server": "Serwer",
-    "header_support": "Wsparcie",
     "mdnsEnabled": "Włącz Wykrywanie mDNS",
     "mdnsEnabledTooltip": "Rozgłaszaj usługę przez mDNS, aby urządzenia mogły ją znaleźć automatycznie (wymaga Avahi na Linux)",
     "mdnsInfo": "mDNS używa Avahi na Linux. Zainstaluj za pomocą: `sudo apt install avahi-daemon`\n\nJeśli mDNS jest wyłączone lub nie działa, wprowadź URL ręcznie na ekranie:\n`http://YOUR_IP:8123`",
@@ -20,5 +19,6 @@
     "username": "Nazwa użytkownika",
     "visUrl": "URL Przekierowania",
     "visUrlTooltip": "URL do przekierowania urządzeń po uwierzytelnieniu (np. http://192.168.1.100:8082/vis/)",
-    "warningLocalhost": "**Ważne:** Nie używaj 'localhost' ani '127.0.0.1' — użyj rzeczywistego adresu IP swojego serwera ioBroker!"
+    "warningLocalhost": "**Ważne:** Nie używaj 'localhost' ani '127.0.0.1' — użyj rzeczywistego adresu IP swojego serwera ioBroker!",
+    "supportHeader": "Wsparcie"
 }

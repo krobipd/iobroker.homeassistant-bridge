@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "homeassistant-bridge",
-    "version": "0.8.9",
+    "version": "0.8.10",
     "news": {
+      "0.8.10": {
+        "en": "Consistent admin UI i18n keys, add PayPal to FUNDING.yml",
+        "de": "Konsistente Admin-UI i18n-Keys, PayPal zur FUNDING.yml hinzugefügt",
+        "ru": "Согласованные ключи i18n в Admin UI, добавлен PayPal в FUNDING.yml",
+        "pt": "Chaves i18n consistentes na UI admin, PayPal adicionado ao FUNDING.yml",
+        "nl": "Consistente admin-UI i18n-sleutels, PayPal toegevoegd aan FUNDING.yml",
+        "fr": "Clés i18n cohérentes dans l interface admin, PayPal ajouté à FUNDING.yml",
+        "it": "Chiavi i18n coerenti nell interfaccia admin, PayPal aggiunto a FUNDING.yml",
+        "es": "Claves i18n consistentes en la UI de admin, PayPal añadido a FUNDING.yml",
+        "pl": "Spójne klucze i18n w admin UI, PayPal dodany do FUNDING.yml",
+        "uk": "Узгоджені ключі i18n в Admin UI, PayPal додано до FUNDING.yml",
+        "zh-cn": "一致的管理界面 i18n 键，FUNDING.yml 中添加 PayPal"
+      },
       "0.8.9": {
         "en": "Use adapter timer methods instead of native setInterval, add Windows/macOS to CI, README license with full MIT text, split old changelog",
         "de": "Adapter-Timer-Methoden statt nativem setInterval verwenden, Windows/macOS zur CI hinzugefügt, README-Lizenz mit vollständigem MIT-Text, alte Changelog-Einträge ausgelagert",
@@ -80,19 +93,6 @@
         "pl": "Czyszczenie logowania: auth flow, redirect i szczegóły konfiguracji przeniesione na debug; zbędne komunikaty info start/stop usunięte",
         "uk": "Очищення логування: auth flow, redirect та деталі конфігурації переміщено на debug; видалено надлишкові повідомлення start/stop",
         "zh-cn": "日志清理：将auth流程、重定向和配置详情移至debug级别；删除冗余的start/stop info消息"
-      },
-      "0.8.3": {
-        "en": "Remove unused `info.clients` state (was a misleading cumulative counter, not actual active connections)\nRemove dead code: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`\nSimplify `createSession` signature",
-        "de": "Entfernen Sie nicht verwendet `info.clients` Zustand (war ein irreführender kumulativer Zähler, nicht tatsächliche aktive Verbindungen)\nEntfernen Sie den toten Code: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`\nVereinfachen `createSession` Signatur",
-        "ru": "Удалить неиспользуемое состояние info.clients (было вводящим в заблуждение кумулятивным счетчиком, а не фактическими активными соединениями)\nУдалите мертвый код: «SessionData.flowId», «connectedClients», «AdapterInterface.setStateAsync»\nУпростите подпись «Создать сессию»",
-        "pt": "Remova o estado 'info.clients' não utilizado (foi um contador cumulativo enganoso, não conexões ativas reais)\nRemover código morto: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync'\nSimplifique a assinatura do `createSession'",
-        "nl": "Verwijder ongebruikte status van de staat van de klant (was een misleidende cumulatieve teller, niet echte actieve verbindingen)\nVerwijder de dode code: \nVereenvoudigen van de ondertekening",
-        "fr": "Supprimer l'état `info.clients` inutilisé (était un compteur cumulatif trompeur, pas de connexions actives réelles)\nSupprimer le code mort: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`\nSimplifier la signature `createSession`",
-        "it": "Rimuovere lo stato `info.clients` non utilizzato (era un contatore cumulativo fuorviante, non connessioni attive reali)\nRimuovere il codice morto: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`\nSemplifica la firma `createSession`",
-        "es": "Remove unused `info.clients` state ( was a misleading cumulative counter, not actual active connections)\nRemove dead code: `SessionData.flowId`, `connectedClients`, `AdapterInterface.setStateAsync`\nSimplifique la firma \"createSession \"",
-        "pl": "Usuń niewykorzystany stan 'info.clients' (był wprowadzającym w błąd licznik, a nie rzeczywiste aktywne połączenia)\nUsuń martwy kod: 'SessionData.flowId', 'connectedClients', 'AdapterInterface.setStateAsync'\nUproszczenie podpisu \"createSession\"",
-        "uk": "Видаліть невикористаний стан `info.clients` (відсутній в оману мулятивний лічильник, не активні з'єднання)\nВидалити мертвий код: `SessionData.flowId`, `connectedClients`, `apperInterface.setStateAsync`\nСпрощуємо підпис `createSession`",
-        "zh-cn": "删除未使用的“ info.clients”状态(是一个误导的累积计数器,而不是实际的主动连接)\n删除已死代码: 'SessionData.flowId ' 、`连接客户 ' 、`Adapter Interface.setStateAsync'\n简化“创建会议”签名"
       }
     },
     "titleLang": {

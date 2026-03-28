@@ -10,7 +10,6 @@
     "header_auth": "验证",
     "header_mdns": "mDNS 发现",
     "header_server": "服务器",
-    "header_support": "支持",
     "mdnsEnabled": "启用 mDNS 发现",
     "mdnsEnabledTooltip": "通过 mDNS 广播服务，使设备能够自动找到它（Linux 上需要 Avahi）",
     "mdnsInfo": "mDNS 在 Linux 上使用 Avahi。安装命令：`sudo apt install avahi-daemon`\n\n如果 mDNS 已禁用或无法正常工作，请在显示屏上手动输入 URL：\n`http://YOUR_IP:8123`",
@@ -20,5 +19,6 @@
     "username": "用户名",
     "visUrl": "重定向 URL",
     "visUrlTooltip": "认证后将设备重定向到的 URL（例如 http://192.168.1.100:8082/vis/）",
-    "warningLocalhost": "**重要：** 请勿使用 'localhost' 或 '127.0.0.1' — 请使用您的 ioBroker 服务器的实际 IP 地址！"
+    "warningLocalhost": "**重要：** 请勿使用 'localhost' 或 '127.0.0.1' — 请使用您的 ioBroker 服务器的实际 IP 地址！",
+    "supportHeader": "支持"
 }

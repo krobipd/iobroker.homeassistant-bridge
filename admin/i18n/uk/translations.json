@@ -10,7 +10,6 @@
     "header_auth": "Аутентифікація",
     "header_mdns": "Виявлення mDNS",
     "header_server": "Сервер",
-    "header_support": "Підтримка",
     "mdnsEnabled": "Увімкнути mDNS Виявлення",
     "mdnsEnabledTooltip": "Транслювати службу через mDNS, щоб пристрої могли знайти її автоматично (потребує Avahi на Linux)",
     "mdnsInfo": "mDNS використовує Avahi на Linux. Встановіть за допомогою: `sudo apt install avahi-daemon`\n\nЯкщо mDNS вимкнено або не працює, введіть URL вручну на дисплеї:\n`http://YOUR_IP:8123`",
@@ -20,5 +19,6 @@
     "username": "Ім'я користувача",
     "visUrl": "URL Переспрямування",
     "visUrlTooltip": "URL для переспрямування пристроїв після автентифікації (напр. http://192.168.1.100:8082/vis/)",
-    "warningLocalhost": "**Важливо:** Не використовуйте 'localhost' або '127.0.0.1' — використовуйте реальну IP-адресу вашого сервера ioBroker!"
+    "warningLocalhost": "**Важливо:** Не використовуйте 'localhost' або '127.0.0.1' — використовуйте реальну IP-адресу вашого сервера ioBroker!",
+    "supportHeader": "Підтримка"
 }

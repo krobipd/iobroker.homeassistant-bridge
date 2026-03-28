@@ -1,6 +1,11 @@
 # Changelog
 ## **WORK IN PROGRESS**
 
+## 0.8.10 (2026-03-28)
+
+- Consistent admin UI i18n keys (supportHeader)
+- Add PayPal to FUNDING.yml
+
 ## 0.8.9 (2026-03-28)
 
 - Use adapter timer methods (setInterval/clearInterval) instead of native timers
