@@ -1,6 +1,10 @@
 # Changelog
 ## **WORK IN PROGRESS**
 
+## 0.8.11 (2026-03-28)
+
+- Add error middleware for malformed JSON requests (returns 400 instead of 500)
+
 ## 0.8.10 (2026-03-28)
 
 - Consistent admin UI i18n keys (supportHeader)

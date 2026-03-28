@@ -116,6 +116,9 @@ http://<IP>:8123/health
 
 ## Changelog
 
+### 0.8.11 (2026-03-28)
+- Add error middleware for malformed JSON requests (returns 400 instead of 500)
+
 ### 0.8.10 (2026-03-28)
 - Consistent admin UI i18n keys, add PayPal to FUNDING.yml
 
@@ -133,9 +136,6 @@ http://<IP>:8123/health
 
 ### 0.8.5 (2026-03-19)
 - Admin UI: port field removed (fixed at 8123)
-
-### 0.8.4 (2026-03-19)
-- Logging cleanup: auth flow, redirect and config moved to debug
 
 Older changelog: [CHANGELOG.md](CHANGELOG.md)
 

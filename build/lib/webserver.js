@@ -73,6 +73,15 @@ class WebServer {
     setupMiddleware() {
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: true }));
+        // Handle JSON parse errors — return 400 instead of generic 500
+        this.app.use((err, _req, res, next) => {
+            if (err instanceof SyntaxError && 'body' in err) {
+                this.adapter.log.debug(`Malformed JSON in request: ${err.message}`);
+                res.status(400).json({ error: 'Invalid JSON in request body' });
+                return;
+            }
+            next(err);
+        });
         // Request logging — use debug level to keep production logs clean
         this.app.use((req, _res, next) => {
             this.adapter.log.debug(`${req.method} ${req.path}`);

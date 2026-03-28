@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "homeassistant-bridge",
-    "version": "0.8.10",
+    "version": "0.8.11",
     "news": {
+      "0.8.11": {
+        "en": "Add error middleware for malformed JSON requests (400 instead of 500)",
+        "de": "Fehler-Middleware für fehlerhafte JSON-Anfragen hinzugefügt (400 statt 500)",
+        "ru": "Добавлена обработка ошибок для некорректных JSON-запросов (400 вместо 500)",
+        "pt": "Adicionado middleware de erro para requisições JSON malformadas (400 em vez de 500)",
+        "nl": "Fout middleware toegevoegd voor ongeldige JSON-verzoeken (400 in plaats van 500)",
+        "fr": "Ajout d'un middleware d'erreur pour les requêtes JSON malformées (400 au lieu de 500)",
+        "it": "Aggiunto middleware errore per richieste JSON malformate (400 invece di 500)",
+        "es": "Añadido middleware de error para solicitudes JSON malformadas (400 en lugar de 500)",
+        "pl": "Dodano middleware obsługi błędów dla nieprawidłowych żądań JSON (400 zamiast 500)",
+        "uk": "Додано проміжне ПЗ для помилкових JSON-запитів (400 замість 500)",
+        "zh-cn": "添加错误中间件处理格式错误的JSON请求（400替代500）"
+      },
       "0.8.10": {
         "en": "Consistent admin UI i18n keys, add PayPal to FUNDING.yml",
         "de": "Konsistente Admin-UI i18n-Keys, PayPal zur FUNDING.yml hinzugefügt",
@@ -80,19 +93,6 @@
         "pl": "Admin UI: selektor interfejsu przeniesiony przed port; pole portu usunięte (stałe 8123)",
         "uk": "Admin UI: вибір інтерфейсу переміщено перед портом; поле порту видалено (фіксовано на 8123)",
         "zh-cn": "管理界面：将接口选择器移至端口之前；删除端口字段（固定为8123）"
-      },
-      "0.8.4": {
-        "en": "Logging cleanup: auth flow, redirect and config details moved to debug; remove redundant start/stop info messages",
-        "de": "Logging-Bereinigung: Auth-Flow, Redirect und Konfigurationsdetails auf Debug-Level verschoben; redundante Start/Stop-Info-Meldungen entfernt",
-        "ru": "Очистка логирования: auth flow, redirect и детали конфигурации перенесены на уровень debug; удалены избыточные сообщения start/stop",
-        "pt": "Limpeza de logging: auth flow, redirect e detalhes de configuração movidos para debug; mensagens de info start/stop redundantes removidas",
-        "nl": "Logging opruiming: auth flow, redirect en configuratiedetails verplaatst naar debug; redundante start/stop info-berichten verwijderd",
-        "fr": "Nettoyage du logging: auth flow, redirect et détails de configuration déplacés en debug; messages d'info start/stop redondants supprimés",
-        "it": "Pulizia logging: auth flow, redirect e dettagli di configurazione spostati in debug; messaggi info start/stop ridondanti rimossi",
-        "es": "Limpieza de logging: auth flow, redirect y detalles de configuración movidos a debug; mensajes info de start/stop redundantes eliminados",
-        "pl": "Czyszczenie logowania: auth flow, redirect i szczegóły konfiguracji przeniesione na debug; zbędne komunikaty info start/stop usunięte",
-        "uk": "Очищення логування: auth flow, redirect та деталі конфігурації переміщено на debug; видалено надлишкові повідомлення start/stop",
-        "zh-cn": "日志清理：将auth流程、重定向和配置详情移至debug级别；删除冗余的start/stop info消息"
       }
     },
     "titleLang": {
