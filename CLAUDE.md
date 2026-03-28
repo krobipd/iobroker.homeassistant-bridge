@@ -113,7 +113,7 @@ admin/
 
 ## Status
 
-**Auf npm veröffentlicht** ✅ — `iobroker.homeassistant-bridge@0.8.8`
+**Auf npm veröffentlicht** ✅ — `iobroker.homeassistant-bridge@0.8.10`
 **ioBroker Repository PR** ✅ — https://github.com/ioBroker/ioBroker.repositories/pull/5642 (ausstehend)
 **Release-Pipeline** ✅ — vollautomatisch via `test-and-release.yml` (einziger Workflow!)
 
@@ -127,6 +127,8 @@ admin/
 
 | Version | Änderungen |
 |---------|------------|
+| 0.8.10 | Konsistenter i18n-Key `supportHeader`, FUNDING.yml PayPal hinzugefügt |
+| 0.8.9 | Adapter-Timer statt native setInterval, Windows/macOS CI, MIT-Volltext README, CHANGELOG_OLD.md |
 | 0.8.8 | Single-Page Admin UI, sync onUnload fix, Ko-fi Icon entfernt, translate Script |
 | 0.8.7 | Fix Repository-URL für Admin UI GitHub-Installation (.git Suffix entfernt) |
 | 0.8.6 | Admin UI i18n: alle 11 Sprachen, kurze semantische Keys |
